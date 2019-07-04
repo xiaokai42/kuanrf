@@ -1,0 +1,200 @@
+<section id="page-box">
+	<!-- header -->
+	<header>
+		<div class="header-content">
+			<div class="logo"></div>
+			<div class="header-text"></div>
+			<div class="header-phone">
+				<p>解放碑店：$!{home.phone1}</p>
+				<p>沙坪坝店：$!{home.phone2}</p>
+			</div>
+		</div>
+	</header>
+	<!-- nav menu -->
+	<nav>
+		<div class="nav-content">
+			<div class="nav-menu">
+				<a class="nav-child" href="${request.contextPath}/public">首页</a>
+				<a class="nav-child" href="${request.contextPath}/public/advantage">品牌介绍</a>
+				<a class="nav-child has-child" href="#">
+					门店信息
+					<div class="menu-child">
+						<span data-uri="store-jfb.html">解放碑店</span>
+						<span data-uri="store-spb.html">沙坪坝店</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					母婴照护
+					<div class="menu-child">
+						<span data-uri="myzh-1.html">孕期课堂</span>
+						<span data-uri="myzh-2.html">月子期护理</span>
+						<span data-uri="myzh-3.html">产褥期形体指导</span>
+						<span data-uri="myzh-4.html">营养膳食</span>
+						<span data-uri="myzh-5.html">宝宝护理</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					产后修复
+					<div class="menu-child">
+						<span data-uri="chxf-1.html">产后体质调理</span>
+						<span data-uri="chxf-2.html">产后形体重塑</span>
+						<span data-uri="chxf-3.html">女性私密维养</span>
+						<span data-uri="chxf-4.html">舒缓调理</span>
+					</div>
+				</a>
+				<a class="nav-child" href="${request.contextPath}/public/active">精彩活动</a>
+				<a class="nav-child" href="${request.contextPath}/public/about">联系我们</a>
+				<a class="nav-child" href="child/recruit.html">人才招聘</a>
+			</div>
+		</div>
+		<div class="nav-secound"></div>
+	</nav>
+	<!-- 首页大图 -->
+	<section class="main-img">
+		<div class="main-img-wrapper">
+			<img src="${request.contextPath}/public/showPhoto?id=$!{activeImg.bannerImg}&type=60" width="1920" height="600" />
+		</div>
+	</section>
+	<!-- 宽仁妇孺妈妈学院 -->
+	<section class="active">
+		<div class="active-content">
+			<div class="active-content-title">宽 仁 妇 孺 妈 妈 学 院</div>
+			<div class="ac-text">
+				#if($!map.list1.size()>0)
+					#foreach($item in $!map.list1)
+						#if($velocityCount<5)
+						<a href="${request.contextPath}/public/active/detail?id=$!{item.id}" class="ac-box">
+							<div class="ac-box-img">
+								<img src="${request.contextPath}/public/showPhoto?id=$!{item.firstImg}&type=61" width="120" height="120" />
+							</div>
+							<div class="ac-font"><span>$!{item.month}</span> / <span>$!{item.day}</span></div>
+							<div class="ac-main">
+								<h1>
+									#set($str=$!item.title)
+									#if($str.length()>12)
+									    #set($str=$str.substring(0,12))
+									    $str ...
+									#else
+									    $!item.title
+									#end
+								</h1>
+								<p>
+									#set($str1=$!item.txt)
+									#if($str1.length()>32)
+									    #set($str1=$str1.substring(0,32))
+									    $str1 ...
+									#else
+									    $!item.txt
+									#end
+								</p>
+							</div>
+						</a>
+						#end
+					#end
+				#end
+			</div>
+			<a href="${request.contextPath}/public/active/tolist?type=10" class="ac-more"></a>
+		</div>
+	</section>
+	<!-- 在住妈妈多彩活动 -->
+	<section class="active1">
+		<div class="active1-content">
+			<div class="ac1-main">
+				#if($!map.list2.size()>0)
+					#foreach($item in $!map.list2)
+						#if($velocityCount<4)
+							#if($velocityCount==2)
+								<a href="${request.contextPath}/public/active/detail?id=$!{item.id}" class="ac1-box">
+									<div class="ac1-font"><span>$!{item.month}</span> / <span>$!{item.day}</span></div>
+									<div class="ac1-text">
+										<h1>
+											#set($str2=$!item.title)
+											#if($str2.length()>12)
+											    #set($str2=$str2.substring(0,12))
+											    $str2 ...
+											#else
+											    $!item.title
+											#end
+										</h1>
+										<p>
+											#set($str3=$!item.txt)
+											#if($str3.length()>80)
+											    #set($str3=$str3.substring(0,77))
+											    $str3 ...
+											#else
+											    $!item.txt
+											#end
+										</p>
+									</div>
+								</a>
+								<a href="${request.contextPath}/public/active/detail?id=$!{item.id}" class="ac1-box">
+									<img src="${request.contextPath}/public/showPhoto?id=$!{item.firstImg}&type=61" width="400" height="320" />
+								</a>
+							#else
+								<a href="${request.contextPath}/public/active/detail?id=$!{item.id}" class="ac1-box">
+									<img src="${request.contextPath}/public/showPhoto?id=$!{item.firstImg}&type=61" width="400" height="320" />
+								</a>
+								<a href="${request.contextPath}/public/active/detail?id=$!{item.id}" class="ac1-box">
+									<div class="ac1-font"><span>$!{item.month}</span> / <span>$!{item.day}</span></div>
+									<div class="ac1-text">
+										<h1>
+											#set($str2=$!item.title)
+											#if($str2.length()>12)
+											    #set($str2=$str2.substring(0,12))
+											    $str2 ...
+											#else
+											    $!item.title
+											#end
+										</h1>
+										<p>
+											#set($str3=$!item.txt)
+											#if($str3.length()>77)
+											    #set($str3=$str3.substring(0,77))
+											    $str3 ...
+											#else
+											    $!item.txt
+											#end
+										</p>
+									</div>
+								</a>
+							#end
+						#end
+					#end
+				#end
+				<a href="${request.contextPath}/public/active/tolist?type=20" class="ac1-more"></a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-content1">
+			<a class="return-top" title="返回顶部"></a>
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName1}</td>
+				</tr>
+				<tr>
+					<td align="right" width="40">Add：</td>
+					<td>$!{home.addresss1}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone1}</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName2}</td>
+				</tr>
+				<tr>
+					<td align="right">Add：</td>
+					<td>$!{home.addresss2}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone2}</td>
+				</tr>
+			</table>
+			<img src="${request.contextPath}/public/showPhoto?id=$!{home.twoBarCodes}&type=15" width="145" height="145" />
+		</div>
+	</footer>
+</section>

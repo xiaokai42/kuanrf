@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>宽仁妇孺照护中心</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- jQuery -->
+<script src="${request.contextPath}/resources/plugins/jquery/jquery-2.1.4.min.js"></script>
+##<script type="text/javascript" src="${request.contextPath}/resources/plugins/dtGrid/dependents/jquery/jquery.min.js"></script>
+<!-- bootstrap -->
+<script type="text/javascript" src="${request.contextPath}/resources/plugins/dtGrid/dependents/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/plugins/dtGrid/dependents/bootstrap/css/bootstrap.min.css" media="screen"/>
+<!--[if lt IE 9]>
+    <script src="${request.contextPath}/resources/plugins/dtGrid/dependents/bootstrap/plugins/ie/html5shiv.js"></script>
+    <script src="${request.contextPath}/resources/plugins/dtGrid/dependents/bootstrap/plugins/ie/respond.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+    <script src="${request.contextPath}/resources/plugins/dtGrid/dependents/bootstrap/plugins/ie/json2.js"></script>
+<![endif]-->
+<!-- font-awesome -->
+<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/plugins/dtGrid/dependents/fontAwesome/css/font-awesome.min.css" media="all" />
+<!-- dtGrid -->
+<script src="${request.contextPath}/resources/plugins/dtGrid/jquery.dtGrid.js" type="text/javascript"></script>
+<script src="${request.contextPath}/resources/plugins/dtGrid/i18n/zh-cn.js" type="text/javascript"></script>
+<link href="${request.contextPath}/resources/plugins/dtGrid/jquery.dtGrid.min.css" rel="stylesheet">
+<!-- datePicker -->
+<script type="text/javascript" src="${request.contextPath}/resources/plugins/dtGrid/dependents/datePicker/WdatePicker.js" defer="defer"></script>
+<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/plugins/dtGrid/dependents/datePicker/skin/WdatePicker.css" />
+<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/plugins/dtGrid/dependents/datePicker/skin/default/datepicker.css" />
+<!-- layer -->
+<script src="${request.contextPath}/resources/plugins/layer/layer.js"></script>
+<script src="${request.contextPath}/resources/plugins/blockUI/jquery.blockUI.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/css/common/main.css" />
+
+<script src="${request.contextPath}/resources/plugins/uploadFile/ajaxfileupload.js"></script>
+<script src="${request.contextPath}/resources/plugins/base64/jquery.base64.js"></script>
+
+<script src="${request.contextPath}/resources/js/lib/extensions.js"></script>
+<script src="${request.contextPath}/resources/js/lib/Util.js"></script>
+<script src="${request.contextPath}/resources/js/lib/i18n.js"></script>
+<script src="${request.contextPath}/resources/js/lib/md5.js"></script>
+
+#parse($!{head_path})
+</head>
+<body>
+#parse($!{content_path})
+
+</body>
+</html>

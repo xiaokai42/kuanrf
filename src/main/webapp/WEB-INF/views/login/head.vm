@@ -1,0 +1,3 @@
+##?t=$!{date.medium_time}
+<link href="$!{request.contextPath}/resources/css/login/index.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/js/page/login/index.js"></script>

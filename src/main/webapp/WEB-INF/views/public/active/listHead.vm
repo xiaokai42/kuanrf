@@ -1,0 +1,4 @@
+<link href="$!{request.contextPath}/resources/css/public/child.css" rel="stylesheet" />
+<link href="$!{request.contextPath}/resources/plugins/laypage/laypage.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/plugins/laypage/laypage.js"></script>
+<script src="${request.contextPath}/resources/js/page/public/list.js"></script>

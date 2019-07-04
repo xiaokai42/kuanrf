@@ -1,0 +1,34 @@
+<section class="box">
+	<div class="box-left">重庆市设计下乡服务平台</div>
+	<div class="box-right">
+		<form action="${request.contextPath}/login" method="post" id="loginForm">
+		<table>
+			<tr>
+				<td width="20%" align="right">用户名</td>
+				<td width="80%"><input type="text" name="username" value="$!{username}"/></td>
+			</tr>
+			<tr>
+				<td width="20%" align="right">密码</td>
+				<td width="80%"><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+				<td width="20%" align="right">验证码</td>
+				<td width="80%">
+					<input type="text" style="width: 60%;text-transform:uppercase;" name="verifycode" />
+					<img class="captchaImg" src="${request.contextPath}/captcha"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="errorMsg" id="msgTip">$!{msg}</div>
+					<div class="btn-box">
+						<input type="button" class="btnBox btnBack" value="返回"/>
+						##<input type="button" class="btnBox" value="注册"/>
+						<input type="submit" class="btnBox btnRight" value="登录"/>
+            		</div>
+                </td>
+            </tr>
+		</table>
+		</form>
+	</div>
+</section>

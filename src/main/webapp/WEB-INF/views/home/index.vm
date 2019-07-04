@@ -1,0 +1,337 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="homeId" value="$!{home.id}"/>
+        <header>
+            <span>首页信息编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>首页大图</font></a>
+        </div>
+        <table>
+            <tr>
+            	<!-- banner img 1 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg1}&type=10" width="200" height="99" id="homeImg1-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg1" id="homeImg1-input" value="$!{home.bannerImg1}" />
+                    <input type="file" id="homeImg1" data-type="10" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+                <!-- banner img 2 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg2}&type=10" width="200" height="99" id="homeImg2-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg2" id="homeImg2-input" value="$!{home.bannerImg2}" />
+                    <input type="file" id="homeImg2" data-type="10" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+            <tr>
+            	<!-- banner img 3 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg3}&type=10" width="200" height="99" id="homeImg3-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg3" id="homeImg3-input" value="$!{home.bannerImg3}" />
+                    <input type="file" id="homeImg3" data-type="10" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+                <!-- banner img 4 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg4}&type=10" width="200" height="99" id="homeImg4-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg4" id="homeImg4-input" value="$!{home.bannerImg4}" />
+                    <input type="file" id="homeImg4" data-type="10" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>品牌优势</font></a>
+        </div>
+        <table id="team-table">
+            <tbody>
+            	<!-- advantage img 1 -->
+                <tr>
+                	<td width="40"><img src="${request.contextPath}/home/showPhoto?id=$!{home.advantageImg1}&type=11" 
+                		width="40" height="40" id="adImg1-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="advantageImg1" id="adImg1-input" value="$!{home.advantageImg1}" />
+                    	<input type="file" id="adImg1" data-type="11" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{home.advantageText1}" 
+                			datatype="*" nullmsg="请输入品牌优势描述" name="advantageText1"/>
+                	</td>
+                </tr>
+                <!-- advantage img 2 -->
+                <tr>
+                	<td width="40"><img src="${request.contextPath}/home/showPhoto?id=$!{home.advantageImg2}&type=11" 
+                		width="40" height="40" id="adImg2-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="advantageImg2" id="adImg2-input" value="$!{home.advantageImg2}" />
+                    	<input type="file" id="adImg2" data-type="11" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{home.advantageText2}" 
+                			datatype="*" nullmsg="请输入品牌优势描述" name="advantageText2"/>
+                	</td>
+                </tr>
+                <!-- advantage img 3 -->
+                <tr>
+                	<td width="40"><img src="${request.contextPath}/home/showPhoto?id=$!{home.advantageImg3}&type=11" 
+                		width="40" height="40" id="adImg3-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="advantageImg3" id="adImg3-input" value="$!{home.advantageImg3}" />
+                    	<input type="file" id="adImg3" data-type="11" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{home.advantageText3}" 
+                			datatype="*" nullmsg="请输入品牌优势描述" name="advantageText3"/>
+                	</td>
+                </tr>
+                <!-- advantage img 4 -->
+                <tr>
+                	<td width="40"><img src="${request.contextPath}/home/showPhoto?id=$!{home.advantageImg4}&type=11" 
+                		width="40" height="40" id="adImg4-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="advantageImg4" id="adImg4-input" value="$!{home.advantageImg4}" />
+                    	<input type="file" id="adImg4" data-type="11" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{home.advantageText4}" 
+                			datatype="*" nullmsg="请输入品牌优势描述" name="advantageText4"/>
+                	</td>
+                </tr>
+                <!-- advantage img 5 -->
+                <tr>
+                	<td width="40"><img src="${request.contextPath}/home/showPhoto?id=$!{home.advantageImg5}&type=11" 
+                		width="40" height="40" id="adImg5-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="advantageImg5" id="adImg5-input" value="$!{home.advantageImg5}" />
+                    	<input type="file" id="adImg5" data-type="11" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{home.advantageText5}" 
+                			datatype="*" nullmsg="请输入品牌优势描述" name="advantageText5"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>探索门店</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- store img 1 -->
+                	<td width="400"><img src="${request.contextPath}/home/showPhoto?id=$!{home.storeImg1}&type=12" 
+                		width="400" height="105" id="storeImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="storeImg1" id="storeImg1-input" value="$!{home.storeImg1}" />
+                    	<input type="file" id="storeImg1" data-type="12" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- store img 2 -->
+                	<td width="400"><img src="${request.contextPath}/home/showPhoto?id=$!{home.storeImg2}&type=12" 
+                		width="400" height="105" id="storeImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="storeImg2" id="storeImg2-input" value="$!{home.storeImg2}" />
+                    	<input type="file" id="storeImg2" data-type="12" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>服务项目</font></a>
+        </div>
+        <table>
+            <tbody>
+            	<!-- server img 1 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverImg1}&type=13" 
+                		width="100" height="100" id="serverImg1-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverImg1" id="serverImg1-input" value="$!{home.serverImg1}" />
+                    	<input type="file" id="serverImg1" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="50"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverIcon1}&type=13" 
+                		width="50" height="50" id="serverIcon1-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverIcon1" id="serverIcon1-input" value="$!{home.serverIcon1}" />
+                    	<input type="file" id="serverIcon1" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="标题"
+                			value="$!{home.serverTitle1}" datatype="*" nullmsg="请输入服务项目标题" name="serverTitle1"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="描述"
+                			value="$!{home.serverText1}" datatype="*" nullmsg="请输入服务项目描述" name="serverText1"/>
+                	</td>
+                </tr>
+                <!-- server img 2 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverImg2}&type=13" 
+                		width="100" height="100" id="serverImg2-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverImg2" id="serverImg2-input" value="$!{home.serverImg2}" />
+                    	<input type="file" id="serverImg2" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="50"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverIcon2}&type=13" 
+                		width="50" height="50" id="serverIcon2-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverIcon2" id="serverIcon2-input" value="$!{home.serverIcon2}" />
+                    	<input type="file" id="serverIcon2" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="标题"
+                			value="$!{home.serverTitle2}" datatype="*" nullmsg="请输入服务项目标题" name="serverTitle2"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="描述"
+                			value="$!{home.serverText2}" datatype="*" nullmsg="请输入服务项目描述" name="serverText2"/>
+                	</td>
+                </tr>
+                <!-- server img 3 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverImg3}&type=13" 
+                		width="100" height="100" id="serverImg3-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverImg3" id="serverImg3-input" value="$!{home.serverImg3}" />
+                    	<input type="file" id="serverImg3" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="50"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverIcon3}&type=13" 
+                		width="50" height="50" id="serverIcon3-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverIcon3" id="serverIcon3-input" value="$!{home.serverIcon3}" />
+                    	<input type="file" id="serverIcon3" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="标题"
+                			value="$!{home.serverTitle3}" datatype="*" nullmsg="请输入服务项目标题" name="serverTitle3"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="描述"
+                			value="$!{home.serverText3}" datatype="*" nullmsg="请输入服务项目描述" name="serverText3"/>
+                	</td>
+                </tr>
+                <!-- server img 4 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverImg4}&type=13" 
+                		width="100" height="100" id="serverImg4-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverImg4" id="serverImg4-input" value="$!{home.serverImg4}" />
+                    	<input type="file" id="serverImg4" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="50"><img src="${request.contextPath}/home/showPhoto?id=$!{home.serverIcon4}&type=13" 
+                		width="50" height="50" id="serverIcon4-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="serverIcon4" id="serverIcon4-input" value="$!{home.serverIcon4}" />
+                    	<input type="file" id="serverIcon4" data-type="13" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="标题"
+                			value="$!{home.serverTitle4}" datatype="*" nullmsg="请输入服务项目标题" name="serverTitle4"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="描述"
+                			value="$!{home.serverText4}" datatype="*" nullmsg="请输入服务项目描述" name="serverText4"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>发现更多</font></a>
+        </div>
+        <table id="team-table">
+            <tbody>
+            	<!-- more img 1 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.moreImg1}&type=14" 
+                		width="100" height="100" id="moreImg1-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="moreImg1" id="moreImg1-input" value="$!{home.moreImg1}" />
+                    	<input type="file" id="moreImg1" data-type="14" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" placeholder="描述"
+                			value="$!{home.moreText1}" datatype="*" nullmsg="请输入毕业院校" name="moreText1"/>
+                	</td>
+                </tr>
+                <!-- more img 2 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.moreImg2}&type=14" 
+                		width="100" height="100" id="moreImg2-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="moreImg2" id="moreImg2-input" value="$!{home.moreImg2}"/>
+                    	<input type="file" id="moreImg2" data-type="14" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" placeholder="描述"
+                			value="$!{home.moreText2}" datatype="*" nullmsg="请输入毕业院校" name="moreText2"/>
+                	</td>
+                </tr>
+                <!-- more img 3 -->
+                <tr>
+                	<td width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.moreImg3}&type=14" 
+                		width="100" height="100" id="moreImg3-img"/></td>
+                	<td width="260">
+                		<input type="hidden" name="moreImg3" id="moreImg3-input" value="$!{home.moreImg3}"/>
+                    	<input type="file" id="moreImg3" data-type="14" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" placeholder="描述"
+                			value="$!{home.moreText3}" datatype="*" nullmsg="请输入毕业院校" name="moreText3"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>底部信息</font></a>
+        </div>
+        <table id="team-table">
+            <tbody>
+                <tr>
+                	<td>解放碑店：</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="名称" value="$!{home.storeName1}" 
+                			datatype="*" nullmsg="请输入名称" name="storeName1"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="地址" value="$!{home.addresss1}" 
+                			datatype="*" nullmsg="请输入地址" name="addresss1"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="电话" value="$!{home.phone1}" 
+                			datatype="*" nullmsg="请输入电话" name="phone1"/>
+                	</td>
+                	<td rowspan="2" width="100"><img src="${request.contextPath}/home/showPhoto?id=$!{home.twoBarCodes}&type=15" 
+                		width="100" height="100" id="twoBarCodes-img"/></td>
+                	<td rowspan="2" width="260">
+                		<input type="hidden" name="twoBarCodes" id="twoBarCodes-input" value="$!{home.twoBarCodes}" />
+                    	<input type="file" id="twoBarCodes" data-type="15" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>沙坪坝店：</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="名称" value="$!{home.storeName2}" 
+                			datatype="*" nullmsg="请输入名称" name="storeName2"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="地址" value="$!{home.addresss2}" 
+                			datatype="*" nullmsg="请输入地址" name="addresss2"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form" placeholder="电话" value="$!{home.phone2}" 
+                			datatype="*" nullmsg="请输入电话" name="phone2"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

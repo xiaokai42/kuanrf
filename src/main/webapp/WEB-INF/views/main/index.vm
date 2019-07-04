@@ -1,0 +1,50 @@
+#set($menu_list = ${authTool.getUserModule($!{PROFILE_NAME},"rural",true,"front")})
+<section id="page-box">
+	<!-- header -->
+	<header>
+		<div class="logo">
+			<div class="logo-img"></div>
+			<div class="logo-text">重庆市设计下乡服务平台</div>
+		</div>
+		<div class="persional">
+			<a>$!{accountUser.name}</a>
+			##<a>工作单位：XXXXXXXXXXXXXX</a>
+			<a href="#" onclick="updatePerson()">个人中心</a>
+			<a href="${request.contextPath}/public">返回首页</a>
+			<a href="${request.contextPath}/logout">退出登录</a>
+		</div>
+	</header>
+	<section id="main">
+		<!-- left menu -->
+		<nav>
+			<ul class="menu">
+				#foreach($menu in $!{menu_list})
+				#set($index = $velocityCount)  
+				<li class="menu-item #if($velocityCount == 1)active#end">
+					<a class="menu-item-text" href="#">
+						<span>$!{menu.name}</span>
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+					<ul class="menu-child">
+						#foreach($menuChild in $!{menu.children})
+							<li class="menu-child-item">
+							#if($!{menuChild.url} != "")
+								<a href="$!{menuChild.url}" #if($index == 1 && $velocityCount == 1)class="active"#end target="mainContent">$!{menuChild.name}</a>
+							#else
+								<a href="javascript:void(0);" target="mainContent">$!{menuChild.name}</a>
+							#end
+							</li>
+						#end
+					</ul>
+				</li>
+    			#end
+			</ul>
+		</nav>
+		<!-- right content -->
+		<section id="content">
+			## onload="this.height=mainContent.document.body.scrollHeight+50"
+			<iframe src="" name="mainContent" width="100%" scrolling="no" frameborder="0"></iframe>
+		</section>
+	</section>
+</section>
+<input type="hidden" value="$!{tipMsg}" name="tipMsg" id="tipMsg"/>

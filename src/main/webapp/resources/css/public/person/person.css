@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;;
+	background: #F9F8F4;
+	font-family: PingFang SC;
+}
+
+ul li {
+	list-style: none;
+}
+
+a:link, a:active, a:visited {
+	text-decoration: none;
+}
+
+#main {
+	padding: 20px;
+}
+
+#main .person-title {
+	width: 100%;
+	height: 1.5px;
+	display: block;
+	position: relative;
+	background: #707070;
+}
+
+#main .person-title font {
+	top: -10px;
+	left: 400px;
+	width: 120px;
+	height: 24px;
+	color: #272621;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	background: #F9F8F4;
+}
+
+#main .person-title font.other {
+	left: 370px;
+	width: 190px;
+	text-align: left;
+	text-indent: 24px;
+}
+
+#main table {
+	width: 100%;
+	padding: 10px 0;
+	border-spacing: 0 10px;
+	border-collapse: separate; 
+	/* display: table-cell; */
+}
+
+#main table tr td {
+	color: #807B76;
+	min-width: 50px;
+	font-size: 14px;
+	line-height: 20px;
+	padding-left: 6px;
+	position: relative;
+	word-break: break-all;
+}
+
+#main table tr td.bold {
+	min-width: 90px;
+	max-width: 100px;
+	text-align: right;
+	font-weight: bold;
+}

@@ -1,0 +1,48 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" value="$!{active.id}"/>
+        <header>
+            <span>精彩活动</span>
+            <div class="btn-bar">
+                <button type="button" class="btn-primary" onclick="history.go(-1)">返回</button>
+                <button id="formSubmit" type="button" class="btn-primary">保存</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>活动内容</font></a>
+        </div>
+        <table class="table-form">
+            <tr>
+                <td align="right">活动标题</td>
+                <td colspan="3"><input type="text" name="title" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入活动标题" value="$!{active.title}"/></td>
+            	
+            </tr>
+            <tr>
+            	<td width="10%" align="right">活动类型</td>
+                <td width="40%">
+                	<select name="type" style="width: 100%;">
+                        <option value="10" #if($active.type=="10") selected #end>宽仁妈妈学院</option>
+                        <option value="20" #if($active.type=="20") selected #end>在住妈妈多彩活动</option>
+                    </select>
+                </td>
+                <td width="10%" align="right">活动时间</td>
+                <td width="40%"><input type="text" class="input-form Wdate" onFocus="WdatePicker();" name="activeDt" style="width: 100%;"
+                	datatype="*" nullmsg="请选择活动时间" value="$!date.format('yyyy-MM-dd',$!{active.activeDt})" /> </td>
+            </tr>
+            <tr>
+                <td align="right">首页显示图</td>
+                <td>
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{active.firstImg}&type=60" width="240" height="140" id="aboutImg1-img"/>
+                </td>
+                <td colspan="3">
+                	<input type="hidden" name="firstImg" id="aboutImg1-input" value="$!{active.firstImg}" />
+                    <input type="file" id="aboutImg1" data-type="60" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+        </table>
+        <div class="info-table" style="width:980px;height:650px;">
+        	<script id="editor" name="content" type="text/plain" style="width:980px;height:500px;">$!{active.content}</script>
+        </div>
+    </form>
+</section>

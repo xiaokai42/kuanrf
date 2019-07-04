@@ -1,0 +1,4 @@
+<link href="$!{request.contextPath}/resources/css/public/main.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/plugins/vue/vue.min.js"></script>
+<script src="${request.contextPath}/resources/plugins/vue/vue-slideshow.min.js"></script>
+<script src="${request.contextPath}/resources/js/page/public/index.js"></script>

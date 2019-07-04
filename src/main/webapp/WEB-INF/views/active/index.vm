@@ -1,0 +1,28 @@
+<div class="page-list">
+    <div class="btn-bar">
+        <button type="button" class="btn-primary" id="add-btn">新增</button>
+        <button type="button" class="btn-primary" id="edit-btn">修改</button>
+        <button type="button" class="btn-primary" id="img-btn">头部大图</button>
+    </div>
+    <div class="search-bar">
+        <table>
+            <tr>
+                <td>活动标题</td>
+                <td><input type="text" class="input-form" name="title"/></td>
+                <td>活动类型</td>
+                <td>
+                    <select name="type" onchange="searchData()">
+                        <option value="">全部</option>
+                        <option value="10">宽仁妈妈学院</option>
+                        <option value="20">在住妈妈多彩活动</option>
+                    </select>
+                </td>
+                <td rowspan="2">
+                    <button type="button" class="btn-primary searchBtn">查询</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="tableDiv" class="dt-grid-container table-div"></div>
+    <div id="pagingDiv" class="dt-grid-toolbar-container"></div>
+</div>

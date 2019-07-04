@@ -1,0 +1,2 @@
+<link href="$!{request.contextPath}/resources/css/home/index.css" rel="stylesheet" />
+<script src="$!{request.contextPath}/resources/js/page/active/editImg.js"></script>

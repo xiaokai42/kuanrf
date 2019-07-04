@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;;
+	background: #F9F8F4;
+	font-family: "微软雅黑";
+	display: flex;			/* flex垂直居中布局 */
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh);	/* css3获取浏览器高度 */
+}
+
+ul li {
+	list-style: none;
+}
+
+a:link, a:active, a:visited {
+	text-decoration: none;
+}
+
+.box {
+	width: 900px;
+	height: 450px;
+	background: #fff;
+	display: flex;
+}
+
+.box .box-left {
+	color: #fff;
+	width: 500px;
+	height: 100%;
+	font-size: 28px;
+	text-align: center;
+	line-height: 450px;
+	background: url(../../images/login-box1.jpg) center center;
+}
+
+.box .box-right {
+	width: 360px;
+	height: 100%;
+	padding: 20px;
+}
+
+table {
+	border-collapse: separate;
+}
+
+.box .box-right .tab{
+	margin-top: 40px;
+}
+
+.box .box-right table {
+	width: 100%;
+	color: #807B76;
+	margin-top: 120px;
+	border-spacing: 20px;
+}
+
+.box .box-right table tr td input {
+	width: 100%;
+	/* height: 24px; */
+	text-indent: 4px;
+	line-height: 24px;
+	border-radius: 2px;
+	border: 1px #807B76 solid;
+}
+
+.box .btn-box {
+	width: 100%;
+	display: flex;			
+	justify-content: space-between;
+}
+
+.box .btn-box .btnBox {
+	border: 0;
+	color: #fff;
+	/* width: 80px; */
+	width: 135px;
+	height: 24px;
+	margin: 15px;
+	outline: none;
+	cursor: pointer;
+	line-height: 24px;
+	border-radius: 7px;
+	background: #807B76;
+}
+
+.box .btn-box .btnBox:hover {
+	background: #999;
+}
+
+.box .btn-box .btnRight {
+	margin-right:0px;
+}
+
+.box .captchaImg {
+	float: right;
+	border-radius: 2px;
+	width: 35%;
+}
+
+.box .errorMsg {
+	margin-left: 15px;
+	color: red;
+}
+.ts{
+	font-size: 14px;
+}

@@ -1,0 +1,81 @@
+<div class="page-list">
+	<div class="search-bar">
+		<form class="form-horizontal" role="form">
+			<table style="width:100%">
+				<tr >
+					<td class="text-nowrap control-label">
+						<label>账号</label>
+                    </td>
+					<td>
+						<input type="text" name="username" value="$!{user.username}" disabled class="form-control" placeholder="必填,至少6位由数字和字母组成">
+                    </td>
+                </tr>
+				<tr >
+					<td class="text-nowrap control-label">
+						<label>姓名</label>
+                    </td>
+					<td >
+						<input type="text" name="name" value="$!{user.name}" class="form-control" placeholder="必填">
+                    </td>
+                </tr>
+				<tr >
+					<td class="text-nowrap control-label">
+						<label>手机号</label>
+                    </td>
+					<td >
+						<input type="text" name="phone" value="$!{user.phone}" class="form-control" placeholder="必填">
+                    </td>
+                </tr>
+				<tr>
+					<td class="text-nowrap control-label">
+						<label>性别</label>
+                    </td>
+					<td >
+						<div class="radio radio-info radio-inline">
+                            <input type="radio" name="gender" id="gender1" value="1" checked />
+                            <label for="gender1">男</label>
+                        </div>
+						<div class="radio radio-info radio-inline">
+                            <input type="radio" name="gender" id="gender2" value="0" #if($!{user.gender}==0) checked #end />
+                            <label for="gender2">女</label>
+                        </div>
+                    </td>
+				</tr>
+				<tr>
+					<td class="text-nowrap control-label">
+						<label>旧密码</label>
+                    </td>
+					<td >
+						<input type="password" name="oldPwd" class="form-control" placeholder="至少6位由数字和字母组成">
+                    </td>
+				</tr>
+				<tr>
+					<td class="text-nowrap control-label">
+						<label>新密码</label>
+                    </td>
+					<td >
+						<input type="password" name="newPwd" class="form-control" placeholder="至少6位由数字和字母组成">
+                    </td>
+				</tr>
+				<tr >
+					<td class="text-nowrap control-label">
+						<label>确认密码</label>
+                    </td>
+					<td>
+						<input type="password" name="surePwd" class="form-control" placeholder="至少6位由数字和字母组成">
+                    </td>
+                </tr>
+				<tr>
+					<td colspan="2" align="center" >
+						<div class="btn-bar">
+                    		<button type="button" class="btn-primary saveBtn">保存</button>
+                    		<button type="button" class="btn-primary cancelBtn">取消</button>
+                    	</div>
+                    </td>
+				</tr>
+            </table>
+            
+        </form>
+	</div>
+	
+</div>

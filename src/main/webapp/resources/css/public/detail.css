@@ -1,0 +1,26 @@
+/* 内容页 */
+section.active-text {
+	width: 100%;
+	background: url(../../images/active/content-bg.jpg);
+}
+
+section.active-text .al-content {
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+section.active-text .al-content .al-content-main {
+	width: 100%;
+	padding: 40px;
+	min-height: 455px;
+	box-sizing: border-box;
+	border-top: 1px #999 solid;
+}
+
+section.active-text .al-content .al-content-main .text-title {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+

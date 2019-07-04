@@ -1,0 +1,44 @@
+
+<div class="page-list">
+	<div class="btn-bar">
+		<button type="button" class="btn-primary addBtn">增加</button>
+		<button type="button" class="btn-primary editBtn">修改</button>
+		<button type="button" class="btn-primary resetBtn">重置密码</button>
+	</div>
+	<div class="search-bar">
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td><input type="text" class="input-form" name="stuName"/></td>
+				<td>账号</td>
+				<td><input type="text" class="input-form" name="userName"/></td>
+				<td>手机号</td>
+				<td><input type="text" class="input-form" name="phone"/></td>
+				<td rowspan="2"><button type="button" class="btn-primary searchBtn">查询</button></td>
+			</tr>
+			<tr>
+				<td>角色</td>
+                <td>
+                    <select name="roleId" onchange="searchData()">
+						<option value="">全部</option>
+						#foreach($role in ${roles})
+                        <option value="$!{role.id}">$!{role.name}</option>
+						#end
+                    </select>
+                </td>
+				<td>状态</td>
+                <td>
+                    <select name="status" onchange="searchData()">
+						<option value="">全部</option>
+                        <option value="1">启用</option>
+						<option value="0">禁用</option>
+                    </select>
+                </td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="tableDiv" class="dt-grid-container table-div"></div>
+	<div id="pagingDiv" class="dt-grid-toolbar-container"></div>
+
+</div>

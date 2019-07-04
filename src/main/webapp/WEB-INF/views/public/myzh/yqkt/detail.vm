@@ -1,0 +1,10 @@
+<section id="page-box">
+	<!-- 近期活动 -->
+	<section class="active-text">
+		<div class="al-content">
+			<div class="al-content-main">
+				<div class="text-content">${yqkt.content}</div>
+			</div>
+		</div>
+	</section>
+</section>

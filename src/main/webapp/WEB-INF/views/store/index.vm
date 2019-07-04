@@ -1,0 +1,78 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="storeId" value="$!{store.id}"/>
+        <header>
+            <span>门店信息编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>头部大图</font></a>
+        </div>
+        <table>
+            <tr>
+            	<!-- banner img 1 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{store.bannerImg}&type=30" width="200" height="63" id="aboutImg1-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg" id="aboutImg1-input" value="$!{store.bannerImg}" />
+                    <input type="file" id="aboutImg1" data-type="30" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>解放碑店</font></a>
+        </div>
+        <table>
+            <tbody>
+            	<tr>
+                	<td colspan="4">
+                		<textarea name="jfbText" placeholder="门店描述">$!{store.jfbText}</textarea>
+                	</td>
+                </tr>
+                <tr>
+                	<td width="200"><img src="${request.contextPath}/home/showPhoto?id=$!{store.jfbImg}&type=31" 
+                		width="200" height="112" id="storeImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="jfbImg" id="storeImg1-input" value="$!{store.jfbImg}" />
+                    	<input type="file" id="storeImg1" data-type="31" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="200"><img src="${request.contextPath}/home/showPhoto?id=$!{store.jfbMap}&type=31" 
+                		width="200" height="112" id="storeImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="jfbMap" id="storeImg2-input" value="$!{store.jfbMap}" />
+                    	<input type="file" id="storeImg2" data-type="31" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>沙坪坝店</font></a>
+        </div>
+        <table>
+            <tbody>
+            	<tr>
+                	<td colspan="4">
+                		<textarea name="spbText" placeholder="门店描述">$!{store.spbText}</textarea>
+                	</td>
+                </tr>
+                <tr>
+                	<td width="200"><img src="${request.contextPath}/home/showPhoto?id=$!{store.spbImg}&type=31" 
+                		width="200" height="112" id="storeImg3-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="spbImg" id="storeImg3-input" value="$!{store.spbImg}" />
+                    	<input type="file" id="storeImg3" data-type="31" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="200"><img src="${request.contextPath}/home/showPhoto?id=$!{store.spbMap}&type=31" 
+                		width="200" height="112" id="storeImg4-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="spbMap" id="storeImg4-input" value="$!{store.spbMap}" />
+                    	<input type="file" id="storeImg4" data-type="31" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

@@ -1,0 +1,5 @@
+<link href="$!{request.contextPath}/resources/plugins/city-picker/css/city-picker.css" rel="stylesheet">
+<link href="$!{request.contextPath}/resources/css/main/index.css" rel="stylesheet" />
+<script src="$!{request.contextPath}/resources/plugins/city-picker/js/city-picker.data.js"></script>
+<script src="$!{request.contextPath}/resources/plugins/city-picker/js/city-picker.js"></script>
+<script src="${request.contextPath}/resources/js/page/manage/user/addIndex.js"></script>

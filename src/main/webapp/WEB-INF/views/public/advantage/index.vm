@@ -1,0 +1,129 @@
+<section id="page-box">
+	<!-- header -->
+	<header>
+		<div class="header-content">
+			<div class="logo"></div>
+			<div class="header-text"></div>
+			<div class="header-phone">
+				<p>解放碑店：$!{home.phone1}</p>
+				<p>沙坪坝店：$!{home.phone2}</p>
+			</div>
+		</div>
+	</header>
+	<!-- nav menu -->
+	<nav>
+		<div class="nav-content">
+			<div class="nav-menu">
+				<a class="nav-child" href="${request.contextPath}/public">首页</a>
+				<a class="nav-child" href="${request.contextPath}/public/advantage">品牌介绍</a>
+				<a class="nav-child has-child" href="#">
+					门店信息
+					<div class="menu-child">
+						<span data-uri="store-jfb.html">解放碑店</span>
+						<span data-uri="store-spb.html">沙坪坝店</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					母婴照护
+					<div class="menu-child">
+						<span data-uri="myzh-1.html">孕期课堂</span>
+						<span data-uri="myzh-2.html">月子期护理</span>
+						<span data-uri="myzh-3.html">产褥期形体指导</span>
+						<span data-uri="myzh-4.html">营养膳食</span>
+						<span data-uri="myzh-5.html">宝宝护理</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					产后修复
+					<div class="menu-child">
+						<span data-uri="chxf-1.html">产后体质调理</span>
+						<span data-uri="chxf-2.html">产后形体重塑</span>
+						<span data-uri="chxf-3.html">女性私密维养</span>
+						<span data-uri="chxf-4.html">舒缓调理</span>
+					</div>
+				</a>
+				<a class="nav-child" href="child/active.html">精彩活动</a>
+				<a class="nav-child" href="${request.contextPath}/public/about">联系我们</a>
+				<a class="nav-child" href="child/recruit.html">人才招聘</a>
+			</div>
+		</div>
+		<div class="nav-secound"></div>
+	</nav>
+	<!-- 首页大图 -->
+	<section class="main-img">
+		<div class="main-img-wrapper">
+			<img src="${request.contextPath}/public/showPhoto?id=$!{advantage.bannerImg}&type=20" width="1920" height="600" />
+		</div>
+	</section>
+	<!-- 关于我们 -->
+	<section class="store-about">
+		<div class="store-about-content"><p>$!{advantage.aboutText}</p></div>
+	</section>
+	<!-- 品牌优势 -->
+	<section class="advantage">
+		<div class="advantage-content">
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg1}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText1}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg2}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText2}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg3}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText3}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg4}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText4}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg5}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText5}</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-content1">
+			<a class="return-top" title="返回顶部"></a>
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName1}</td>
+				</tr>
+				<tr>
+					<td align="right" width="40">Add：</td>
+					<td>$!{home.addresss1}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone1}</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName2}</td>
+				</tr>
+				<tr>
+					<td align="right">Add：</td>
+					<td>$!{home.addresss2}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone2}</td>
+				</tr>
+			</table>
+			<img src="${request.contextPath}/public/showPhoto?id=$!{home.twoBarCodes}&type=15" width="145" height="145" />
+		</div>
+	</footer>
+</section>

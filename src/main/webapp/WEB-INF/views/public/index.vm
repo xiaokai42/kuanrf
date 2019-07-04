@@ -1,0 +1,217 @@
+<section id="page-box">
+	<!-- header -->
+	<header>
+		<div class="header-content">
+			<div class="logo"></div>
+			<div class="header-text"></div>
+			<div class="header-phone">
+				<p>解放碑店：$!{home.phone1}</p>
+				<p>沙坪坝店：$!{home.phone2}</p>
+			</div>
+		</div>
+	</header>
+	<!-- nav menu -->
+	<nav>
+		<div class="nav-content">
+			<div class="nav-menu">
+				<a class="nav-child" href="${request.contextPath}/public">首页</a>
+				<a class="nav-child" href="${request.contextPath}/public/advantage">品牌介绍</a>
+				<a class="nav-child has-child" href="#">
+					门店信息
+					<div class="menu-child">
+						<span data-uri="/public/store/jfb">解放碑店</span>
+						<span data-uri="/public/store/spb">沙坪坝店</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					母婴照护
+					<div class="menu-child">
+						<span data-uri="/public/myzh/yqkt">孕期课堂</span>
+						<span data-uri="myzh-2.html">月子期护理</span>
+						<span data-uri="myzh-3.html">产褥期形体指导</span>
+						<span data-uri="myzh-4.html">营养膳食</span>
+						<span data-uri="myzh-5.html">宝宝护理</span>
+					</div>
+				</a>
+				<a class="nav-child has-child" href="#">
+					产后修复
+					<div class="menu-child">
+						<span data-uri="chxf-1.html">产后体质调理</span>
+						<span data-uri="chxf-2.html">产后形体重塑</span>
+						<span data-uri="chxf-3.html">女性私密维养</span>
+						<span data-uri="chxf-4.html">舒缓调理</span>
+					</div>
+				</a>
+				<a class="nav-child" href="${request.contextPath}/public/active">精彩活动</a>
+				<a class="nav-child" href="${request.contextPath}/public/about">联系我们</a>
+				<a class="nav-child" href="child/recruit.html">人才招聘</a>
+			</div>
+		</div>
+		<div class="nav-secound"></div>
+	</nav>
+	<!-- 首页大图 -->
+	<section class="main-img">
+		<div class="main-img-wrapper">
+			<input type="hidden" id="bannerImg1" value="$!{home.bannerImg1}" />
+			<input type="hidden" id="bannerImg2" value="$!{home.bannerImg2}" />
+			<input type="hidden" id="bannerImg3" value="$!{home.bannerImg3}" />
+			<input type="hidden" id="bannerImg4" value="$!{home.bannerImg4}" />
+			<div id="app" style="width:100%;height:984px;">
+				<vue-slideshow :data="images" :config="config"></vue-slideshow>
+			</div>
+			<!-- <img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg1}&type=10" width="1920" height="984" /> -->
+		</div>
+	</section>
+	<!-- 标语大图 -->
+	<section class="slogan-img">
+		<div class="slogan-img-wrapper">
+			<img src="${request.contextPath}/resources/images/homepage/slogan.png" width="1920" height="290" />
+		</div>
+		<div class="slogan-img-text">
+			<p>让妈咪轻松享受月子“假期”</p>
+			<p class="text-small">KUANRF MEDICARE CENTER</p>
+			<p class="text-small">科学关爱 · 专业照护</p>
+		</div>
+	</section>
+	<!-- 品牌优势 -->
+	<section class="advantage">
+		<div class="advantage-content">
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg1}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText1}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg2}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText2}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg3}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText3}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg4}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText4}</p>
+			</div>
+			<div class="ac-box">
+				<div class="ac-box-img">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.advantageImg5}&type=11" width="240" height="240" />
+				</div>
+				<p>$!{home.advantageText5}</p>
+			</div>
+		</div>
+	</section>
+	<!-- 探索门店 -->
+	<section class="store">
+		<div class="store-content">
+			<div class="store-grid">
+				<a class="store-jfb" href="child/store-jfb.html" title="解放碑店">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.storeImg1}&type=12" width="1200" height="314" />
+				</a>
+				<a class="store-spb" href="child/store-spb.html" title="沙坪坝店">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{home.storeImg2}&type=12" width="1200" height="314" />
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- 服务项目 -->
+	<section class="server">
+		<div class="server-content">
+			<div class="sc-box">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.serverImg1}&type=13" width="290" height="282" />
+				<div class="sc-box-title">
+					<div class="ico"><img src="${request.contextPath}/public/showPhoto?id=$!{home.serverIcon1}&type=13" /></div>
+					<div class="text">
+						<span>$!{home.serverTitle1}</span><hr /><p>$!{home.serverText1}</p>
+					</div>
+				</div>
+			</div>
+			<div class="sc-box">
+				<div class="sc-box-title">
+					<div class="ico"><img src="${request.contextPath}/public/showPhoto?id=$!{home.serverIcon2}&type=13" /></div>
+					<div class="text">
+						<span>$!{home.serverTitle2}</span><hr /><p>$!{home.serverText2}</p>
+					</div>
+				</div>
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.serverImg2}&type=13" width="290" height="282" />
+			</div>
+			<div class="sc-box">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.serverImg3}&type=13" width="290" height="282" />
+				<div class="sc-box-title">
+					<div class="ico"><img src="${request.contextPath}/public/showPhoto?id=$!{home.serverIcon3}&type=13" /></div>
+					<div class="text">
+						<span>$!{home.serverTitle3}</span><hr /><p>$!{home.serverText3}</p>
+					</div>
+				</div>
+			</div>
+			<div class="sc-box">
+				<div class="sc-box-title">
+					<div class="ico"><img src="${request.contextPath}/public/showPhoto?id=$!{home.serverIcon4}&type=13" /></div>
+					<div class="text">
+						<span>$!{home.serverTitle4}</span><hr /><p>$!{home.serverText4}</p>
+					</div>
+				</div>
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.serverImg4}&type=13" width="290" height="282" />
+			</div>
+		</div>
+	</section>
+	<!-- 发现更多 -->
+	<section class="more">
+		<div class="more-content">
+			<div class="mc-box">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg1}&type=14" width="387" height="288" />
+				<span>$!{home.moreText1}</span>
+				<div class="detail"></div>
+			</div>
+			<div class="mc-box">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg2}&type=14" width="387" height="288" />
+				<span>$!{home.moreText2}</span>
+				<div class="detail"></div>
+			</div>
+			<div class="mc-box">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg3}&type=14" width="387" height="288" />
+				<span>$!{home.moreText3}</span>
+				<div class="detail"></div>
+			</div>
+			<a title="返回顶部" class="returnTop"></a>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-content">
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName1}</td>
+				</tr>
+				<tr>
+					<td align="right" width="40">Add：</td>
+					<td>$!{home.addresss1}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone1}</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td class="bold" colspan="2">$!{home.storeName2}</td>
+				</tr>
+				<tr>
+					<td align="right">Add：</td>
+					<td>$!{home.addresss2}</td>
+				</tr>
+				<tr>
+					<td align="right">Tel：</td>
+					<td>$!{home.phone2}</td>
+				</tr>
+			</table>
+			<img src="${request.contextPath}/public/showPhoto?id=$!{home.twoBarCodes}&type=15" width="145" height="145" />
+		</div>
+	</footer>
+</section>

@@ -1,0 +1,53 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="aboutId" value="$!{about.id}"/>
+        <header>
+            <span>关于我们信息编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>头部大图</font></a>
+        </div>
+        <table>
+            <tr>
+            	<!-- banner img 1 -->
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{about.bannerImg}&type=70" width="200" height="63" id="aboutImg1-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg" id="aboutImg1-input" value="$!{about.bannerImg}" />
+                    <input type="file" id="aboutImg1" data-type="70" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>图片信息</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- store img 1 -->
+                	<td width="80">解放碑店</td>
+                	<td width="400"><img src="${request.contextPath}/home/showPhoto?id=$!{about.aboutImg1}&type=71" 
+                		width="400" height="166" id="storeImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="aboutImg1" id="storeImg1-input" value="$!{about.aboutImg1}" />
+                    	<input type="file" id="storeImg1" data-type="71" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- store img 2 -->
+                	<td width="80">沙坪坝店</td>
+                	<td width="400"><img src="${request.contextPath}/home/showPhoto?id=$!{about.aboutImg2}&type=71" 
+                		width="400" height="166" id="storeImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="aboutImg2" id="storeImg2-input" value="$!{about.aboutImg2}" />
+                    	<input type="file" id="storeImg2" data-type="71" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

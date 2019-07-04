@@ -1,0 +1,7 @@
+<link href="$!{request.contextPath}/resources/plugins/validform/validform.css" rel="stylesheet">
+<link href="$!{request.contextPath}/resources/css/home/index.css" rel="stylesheet" />
+<script type="text/javascript" charset="utf-8" src="${request.contextPath}/resources/plugins/ueditor1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="${request.contextPath}/resources/plugins/ueditor1.4.3/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="${request.contextPath}/resources/plugins/ueditor1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script src="$!{request.contextPath}/resources/plugins/validform/validform.js"></script>
+<script src="$!{request.contextPath}/resources/js/page/myzh/yqkt/addIndex.js"></script>
