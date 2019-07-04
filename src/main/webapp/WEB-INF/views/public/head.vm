@@ -1,4 +1,5 @@
 <link href="$!{request.contextPath}/resources/css/public/main.css" rel="stylesheet" />
-<script src="${request.contextPath}/resources/plugins/vue/vue.min.js"></script>
-<script src="${request.contextPath}/resources/plugins/vue/vue-slideshow.min.js"></script>
+<link href="$!{request.contextPath}/resources/plugins/shutter/css/shutter.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/plugins/shutter/js/velocity.js"></script>
+<script src="${request.contextPath}/resources/plugins/shutter/js/shutter.js"></script>
 <script src="${request.contextPath}/resources/js/page/public/index.js"></script>

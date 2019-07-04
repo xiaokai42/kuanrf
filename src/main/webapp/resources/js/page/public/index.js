@@ -19,36 +19,13 @@ $(function(){
 		window.location.href = Util.getRootPath() + $(this).attr("data-uri");
 	});
 	
-	var list = [];
-	
-	var img1 = $("#bannerImg1").val(),
-		img2 = $("#bannerImg2").val(),
-		img3 = $("#bannerImg3").val(),
-		img4 = $("#bannerImg4").val();
-	if (img1 != "") {
-		var url1 = Util.getRootPath() + "/public/showPhoto?id=" + img1; 
-		list.push({src: url1, href: "#"});
-	}
-	if (img2 != "") {
-		var url2 = Util.getRootPath() + "/public/showPhoto?id=" + img2; 
-		list.push({src: url2, href: "#"});
-	}
-	if (img3 != "") {
-		var url3 = Util.getRootPath() + "/public/showPhoto?id=" + img3; 
-		list.push({src: url3, href: "#"});
-	}
-	if (img4 != "") {
-		var url4 = Util.getRootPath() + "/public/showPhoto?id=" + img4; 
-		list.push({src: url4, href: "#"});
-	}
-	
-	new Vue({
-		el: "#app",
-		data: {
-			images: list,
-			config: {
-				effect: "slide"
-			}
-		}
+	var width = document.body.offsetWidth;
+	$('.shutter').shutter({
+		shutterW: width, // 容器宽度
+		shutterH: 948, // 容器高度
+		isAutoPlay: true, // 是否自动播放
+		playInterval: 3000, // 自动播放时间
+		curDisplay: 1, // 当前显示页
+		fullPage: false // 是否全屏展示
 	});
 });

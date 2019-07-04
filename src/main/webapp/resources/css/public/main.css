@@ -277,7 +277,8 @@ section.slogan-img {
 	height: 290px;
 	overflow: hidden;
 	position: relative;
-	margin-top: -41px;
+	margin-top: -77px;
+	z-index: 9999;
 }
 
 section.slogan-img .slogan-img-wrapper {
