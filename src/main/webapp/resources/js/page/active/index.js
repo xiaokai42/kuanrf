@@ -84,6 +84,15 @@ function initDataGrid() {
                 type: 'date',
                 format: 'yyyy-MM-dd',
                 columnClass: 'text-center'
+            },
+            {
+                id: 'status',
+                title: '<b>发布状态</b>',
+                type: "string",
+                columnClass: 'text-center',
+                resolution: function (value, record, column, grid, dataNo, columnNo) {
+                    return value==1?'已发布':'未发布';
+                }
             }
         ]
     });
@@ -99,7 +108,8 @@ function initDataGrid() {
 function getParameters() {
     return {
     	title: $.trim($("input[name='title']").val()),
-        type: $.trim($("select[name='type']").val())
+        type: $.trim($("select[name='type']").val()),
+        status: $.trim($("select[name='status']").val())
     };
 }
 

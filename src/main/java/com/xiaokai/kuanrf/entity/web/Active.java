@@ -65,6 +65,11 @@ public class Active extends BaseEntity
      */
     @Column(columnDefinition = "text")
     private String txt;
+    
+    /**
+     * 发布状态
+     */
+    private Integer status;
 
     public String getTitle()
     {
@@ -144,6 +149,16 @@ public class Active extends BaseEntity
     public void setTxt(String txt)
     {
         this.txt = txt;
+    }
+
+    public Integer getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(Integer status)
+    {
+        this.status = status;
     }
 
 }

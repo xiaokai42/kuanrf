@@ -14,14 +14,18 @@
         <table class="table-form">
             <tr>
                 <td align="right">标题</td>
-                <td colspan="4"><input type="text" name="title" class="input-form" style="width: 100%;"
+                <td colspan="2"><input type="text" name="title" class="input-form" style="width: 100%;"
                 	datatype="*" nullmsg="请输入活动标题" value="$!{yqkt.title}"/></td>
+                <td align="right">发布状态</td>
+                <td>
+                	<select name="status" style="width: 100%;">
+                        <option value="1" #if($yqkt.status=="1") selected #end>已发布</option>
+                        <option value="0" #if($yqkt.status=="0") selected #end>未发布</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <td align="right">发布时间</td>
-                <td><input type="text" class="input-form Wdate" onFocus="WdatePicker();" name="activeDt" style="width: 100%;"
-                	datatype="*" nullmsg="请选择发布时间" value="$!date.format('yyyy-MM-dd',$!{yqkt.activeDt})" /> </td>
-           		<td align="right">首页显示图</td>
+            	<td align="right">首页显示图</td>
                 <td>
                 	<img src="${request.contextPath}/home/showPhoto?id=$!{yqkt.firstImg}&type=31" width="240" height="140" id="aboutImg1-img"/>
                 </td>
@@ -29,6 +33,9 @@
                 	<input type="hidden" name="firstImg" id="aboutImg1-input" value="$!{yqkt.firstImg}" />
                     <input type="file" id="aboutImg1" data-type="31" class="uploadImg" name="file" accept="image/*"/>
                 </td>
+                <td align="right">发布时间</td>
+                <td><input type="text" class="input-form Wdate" onFocus="WdatePicker();" name="activeDt" style="width: 100%;"
+                	datatype="*" nullmsg="请选择发布时间" value="$!date.format('yyyy-MM-dd',$!{yqkt.activeDt})" /> </td>
             </tr>
         </table>
         <div class="info-table" style="width:980px;height:650px;">

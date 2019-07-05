@@ -19,8 +19,10 @@ import com.xiaokai.kuanrf.service.manage.AttaService;
 import com.xiaokai.kuanrf.service.web.YqktService;
 
 import cn.proem.core.dao.GeneralDao;
+import cn.proem.core.model.ConditionType;
 import cn.proem.core.model.DataGrid;
 import cn.proem.core.model.DataGridQuery;
+import cn.proem.core.model.FieldType;
 import cn.proem.core.model.Order;
 import cn.proem.core.model.OrderType;
 import cn.proem.core.util.BeanUtils;
@@ -48,6 +50,8 @@ public class YqktServiceImpl implements YqktService
         {
             dataGrid.setNowPage(query.getNowPage());
             dataGrid.setPageSize(query.getPageSize());
+            query.matchQueryCondition("title", null, ConditionType.LIKE, FieldType.STRING, null);
+            query.matchQueryCondition("status", null, ConditionType.EQ, FieldType.INTEGER, null);
             int recordCount = generalDao.countByCriteria(Yqkt.class, query.generateQueryBuilder());
             dataGrid.setRecordCount(recordCount);
             if (recordCount > 0)

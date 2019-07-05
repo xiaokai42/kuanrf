@@ -1037,7 +1037,7 @@ section.recruit .recruit-content .recruit-box .rb-right .rb-text {
 	width: 900px;
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	padding-bottom: 20px;
 	justify-content: flex-start;
 	border-bottom: 1px #adadad solid;

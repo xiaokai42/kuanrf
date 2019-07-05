@@ -27,7 +27,9 @@ $(function(){
 		var param = {
 			pageSize: 8,
 			nowPage: nowPage||1,
-			parameters: {}
+			parameters: {
+				status: 1
+			}
 		};
 		$.ajax({
 			type: "get",

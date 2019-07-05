@@ -20,19 +20,26 @@
             </tr>
             <tr>
             	<td width="10%" align="right">活动类型</td>
-                <td width="40%">
+                <td width="20%">
                 	<select name="type" style="width: 100%;">
                         <option value="10" #if($active.type=="10") selected #end>宽仁妈妈学院</option>
                         <option value="20" #if($active.type=="20") selected #end>在住妈妈多彩活动</option>
                     </select>
                 </td>
+                <td width="10%" align="right">发布状态</td>
+                <td width="20%">
+                	<select name="status" style="width: 100%;">
+                        <option value="1" #if($active.status=="1") selected #end>已发布</option>
+                        <option value="0" #if($active.status=="0") selected #end>未发布</option>
+                    </select>
+                </td>
                 <td width="10%" align="right">活动时间</td>
-                <td width="40%"><input type="text" class="input-form Wdate" onFocus="WdatePicker();" name="activeDt" style="width: 100%;"
+                <td width="30%"><input type="text" class="input-form Wdate" onFocus="WdatePicker();" name="activeDt" style="width: 100%;"
                 	datatype="*" nullmsg="请选择活动时间" value="$!date.format('yyyy-MM-dd',$!{active.activeDt})" /> </td>
             </tr>
             <tr>
                 <td align="right">首页显示图</td>
-                <td>
+                <td colspan="2">
                 	<img src="${request.contextPath}/home/showPhoto?id=$!{active.firstImg}&type=60" width="240" height="140" id="aboutImg1-img"/>
                 </td>
                 <td colspan="3">

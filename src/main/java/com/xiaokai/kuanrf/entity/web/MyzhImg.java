@@ -18,10 +18,22 @@ public class MyzhImg extends BaseEntity
     private static final long serialVersionUID = 6752317327424629223L;
 
     /**
-     * banner大图id
+     * banner大图id-母婴照护
      */
     @Column(name = "banner_img", length = 50)
     private String bannerImg;
+
+    /**
+     * banner大图id-人才招聘
+     */
+    @Column(name = "banner_img1", length = 50)
+    private String bannerImg1;
+
+    /**
+     * banner大图id-最新优惠
+     */
+    @Column(name = "banner_img2", length = 50)
+    private String bannerImg2;
 
     /**
      * 孕期课堂-文本内容

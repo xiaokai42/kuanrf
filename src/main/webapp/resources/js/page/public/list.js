@@ -28,6 +28,7 @@ $(function() {
 			pageSize: 5,
 			nowPage: nowPage||1,
 			parameters: {
+				status: 1,
 				type: $("#type").val()
 			}
 		};

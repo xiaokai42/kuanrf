@@ -51,7 +51,9 @@ public class ActiveServiceImpl implements ActiveService
         {
             dataGrid.setNowPage(query.getNowPage());
             dataGrid.setPageSize(query.getPageSize());
+            query.matchQueryCondition("title", null, ConditionType.LIKE, FieldType.STRING, null);
             query.matchQueryCondition("type", null, ConditionType.EQ, FieldType.INTEGER, null);
+            query.matchQueryCondition("status", null, ConditionType.EQ, FieldType.INTEGER, null);
             int recordCount = generalDao.countByCriteria(Active.class, query.generateQueryBuilder());
             dataGrid.setRecordCount(recordCount);
             if (recordCount > 0)
