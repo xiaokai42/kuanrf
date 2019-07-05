@@ -55,13 +55,47 @@
 			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg}&type=30" width="1920" height="600" />
 		</div>
 	</section>
-	<!-- 标语大图 -->
 	<section class="myzh">
 		<div class="myzh-content">
-			<div class="myzh-content-title">孕 期 课 堂</div>
-			<p>$!{yqktImg.myzhText}</p>
-			<div class="myzh-content-main"></div>
-			<div id="page-bar" style="text-align: right;padding:20px;"></div>
+			<div class="myzh-content-title">营 养 膳 食</div>
+			<p>$!{yyss.mainText}</p>
+			<div class="myzh-content-main">
+				<div class="shutter">
+					<div class="shutter-img">
+						#if(!$yyss.slideImg1 != '')<a><img src="${request.contextPath}/public/showPhoto?id=$!{yyss.slideImg1}" alt="#"></a>#end
+						#if($!yyss.slideImg2 != '')<a><img src="${request.contextPath}/public/showPhoto?id=$!{yyss.slideImg2}" alt="#"></a>#end
+						#if($!yyss.slideImg3 != '')<a><img src="${request.contextPath}/public/showPhoto?id=$!{yyss.slideImg3}" alt="#"></a>#end
+						#if($!yyss.slideImg4 != '')<a><img src="${request.contextPath}/public/showPhoto?id=$!{yyss.slideImg4}" alt="#"></a>#end
+						#if($!yyss.slideImg5 != '')<a><img src="${request.contextPath}/public/showPhoto?id=$!{yyss.slideImg5}" alt="#"></a>#end
+					</div>
+					<ul class="shutter-btn">
+						<li class="prev"></li>
+						<li class="next"></li>
+					</ul>
+				</div>
+				<div class="mcm-text">
+					<div class="mcm-text-ico"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.yyssIcon}&type=34" 
+                		width="72" height="96" id="myzhIcon-img" /></div>
+					<div class="mcm-text-list">
+						<div class="mcm-text-list-box">
+							<div class="mcm-tlb-ico">$!{yyss.yyssTitle1}</div>
+							<span>$!{yyss.yyssText1}</span>
+						</div>
+						<div class="mcm-text-list-box">
+							<div class="mcm-tlb-ico">$!{yyss.yyssTitle2}</div>
+							<span>$!{yyss.yyssText2}</span>
+						</div>
+						<div class="mcm-text-list-box">
+							<div class="mcm-tlb-ico">$!{yyss.yyssTitle3}</div>
+							<span>$!{yyss.yyssText3}</span>
+						</div>
+						<div class="mcm-text-list-box">
+							<div class="mcm-tlb-ico">$!{yyss.yyssTitle4}</div>
+							<span>$!{yyss.yyssText4}</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<footer>

@@ -1,0 +1,4 @@
+<link href="$!{request.contextPath}/resources/plugins/validform/validform.css" rel="stylesheet">
+<link href="$!{request.contextPath}/resources/css/home/index.css" rel="stylesheet" />
+<script src="$!{request.contextPath}/resources/plugins/validform/validform.js"></script>
+<script src="$!{request.contextPath}/resources/js/page/myzh/crqxtzd/index.js"></script>

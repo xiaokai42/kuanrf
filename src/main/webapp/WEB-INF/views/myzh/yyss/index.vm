@@ -1,0 +1,129 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="yyssId" value="$!{yyss.id}"/>
+        <header>
+            <span>营养膳食编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>标题描述</font></a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="mainText" datatype="*" nullmsg="请输入标题描述">$!{yyss.mainText}</textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>轮播图片</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- yyss img 1 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.slideImg1}&type=34" 
+                		width="200" height="142" id="myzhImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="slideImg1" id="myzhImg1-input" value="$!{yyss.slideImg1}" />
+                    	<input type="file" id="myzhImg1" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<!-- yyss img 2 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.slideImg2}&type=34" 
+                		width="200" height="142" id="myzhImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="slideImg2" id="myzhImg2-input" value="$!{yyss.slideImg2}" />
+                    	<input type="file" id="myzhImg2" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yyss img 3 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.slideImg3}&type=34" 
+                		width="200" height="142" id="myzhImg3-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="slideImg3" id="myzhImg3-input" value="$!{yyss.slideImg3}" />
+                    	<input type="file" id="myzhImg3" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<!-- yyss img 4 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.slideImg4}&type=34" 
+                		width="200" height="142" id="myzhImg4-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="slideImg4" id="myzhImg4-input" value="$!{yyss.slideImg4}" />
+                    	<input type="file" id="myzhImg4" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yyss img 5 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.slideImg5}&type=34" 
+                		width="200" height="142" id="myzhImg5-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="slideImg5" id="myzhImg5-input" value="$!{yyss.slideImg5}" />
+                    	<input type="file" id="myzhImg5" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>月子膳食</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- yyss icon 1 -->
+                	<td width="112"><img src="${request.contextPath}/home/showPhoto?id=$!{yyss.yyssIcon}&type=34" 
+                		width="72" height="96" id="myzhIcon-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yyssIcon" id="myzhIcon-input" value="$!{yyss.yyssIcon}" />
+                    	<input type="file" id="myzhIcon" data-type="34" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td width="140">
+                		<input type="text" class="input-form" value="$!{yyss.yyssTitle1}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yyssTitle1"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yyss.yyssText1}" style="width: 100%;"
+                			placeholder="描述" datatype="*" nullmsg="请输入描述" name="yyssText1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td width="112"></td>
+                	<td width="200"></td>
+                	<td>
+                		<input type="text" class="input-form" value="$!{yyss.yyssTitle2}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yyssTitle2"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yyss.yyssText2}" style="width: 100%;"
+                			placeholder="描述" datatype="*" nullmsg="请输入描述" name="yyssText2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td width="112"></td>
+                	<td width="200"></td>
+                	<td>
+                		<input type="text" class="input-form" value="$!{yyss.yyssTitle3}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yyssTitle3"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yyss.yyssText3}" style="width: 100%;"
+                			placeholder="描述" datatype="*" nullmsg="请输入描述" name="yyssText3"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td width="112"></td>
+                	<td width="200"></td>
+                	<td>
+                		<input type="text" class="input-form" value="$!{yyss.yyssTitle4}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yyssTitle4"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yyss.yyssText4}" style="width: 100%;"
+                			placeholder="描述" datatype="*" nullmsg="请输入描述" name="yyssText4"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

@@ -1,0 +1,5 @@
+<link href="$!{request.contextPath}/resources/css/public/child.css" rel="stylesheet" />
+<link href="$!{request.contextPath}/resources/plugins/shutter/css/shutter.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/plugins/shutter/js/velocity.js"></script>
+<script src="${request.contextPath}/resources/plugins/shutter/js/shutter.js"></script>
+<script src="${request.contextPath}/resources/js/page/public/yyss.js"></script>

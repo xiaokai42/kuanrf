@@ -2,6 +2,14 @@ $(function(){
 	// 重置iframe高度 
 	$(window.parent.document).find("iframe").height("");
 	$(window.parent.document).find("iframe").height(document.body.offsetHeight);
+
+	$(top.document).scroll(function() {
+		if ($(top.window).scrollTop() > 113) {
+			$("button.btn-primary").css("top", $(top.window).scrollTop()-113);
+		} else {
+			$("button.btn-primary").css("top", 0);
+		}
+	});
 	
 	// 初始化ueditor编辑器
 	var ue = UE.getEditor('editor', {

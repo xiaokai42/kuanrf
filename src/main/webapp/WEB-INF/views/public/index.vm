@@ -27,10 +27,10 @@
 					母婴照护
 					<div class="menu-child">
 						<span data-uri="/public/myzh/yqkt">孕期课堂</span>
-						<span data-uri="myzh-2.html">月子期护理</span>
-						<span data-uri="myzh-3.html">产褥期形体指导</span>
-						<span data-uri="myzh-4.html">营养膳食</span>
-						<span data-uri="myzh-5.html">宝宝护理</span>
+						<span data-uri="/public/myzh/yzqhl">月子期护理</span>
+						<span data-uri="/public/myzh/crqxtzd">产褥期形体指导</span>
+						<span data-uri="/public/myzh/yyss">营养膳食</span>
+						<span data-uri="/public/myzh/bbhl">宝宝护理</span>
 					</div>
 				</a>
 				<a class="nav-child has-child" href="#">

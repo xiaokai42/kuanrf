@@ -55,13 +55,33 @@
 			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg}&type=30" width="1920" height="600" />
 		</div>
 	</section>
-	<!-- 标语大图 -->
 	<section class="myzh">
 		<div class="myzh-content">
-			<div class="myzh-content-title">孕 期 课 堂</div>
-			<p>$!{yqktImg.myzhText}</p>
-			<div class="myzh-content-main"></div>
-			<div id="page-bar" style="text-align: right;padding:20px;"></div>
+			<div class="myzh-content-title">产 褥 期 形 体 指 导</div>
+			<p>$!{crqxtzd.mainText}</p>
+			<div class="myzh-content-main" style="justify-content: space-around;">
+				<div class="mcm-list2">
+					<div class="mcm-list2-title">
+						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg1}&type=33" width="114" height="114" />
+						<span>$!{crqxtzd.crqxtzdTitle1}</span>
+					</div>
+					<p>$!{crqxtzd.crqxtzdText1}</p>
+				</div>
+				<div class="mcm-list2">
+					<div class="mcm-list2-title">
+						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg2}&type=33" width="114" height="114" />
+						<span>$!{crqxtzd.crqxtzdTitle2}</span>
+					</div>
+					<p>$!{crqxtzd.crqxtzdText2}</p>
+				</div>
+				<div class="mcm-list2">
+					<div class="mcm-list2-title">
+						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg3}&type=33" width="114" height="114" />
+						<span>$!{crqxtzd.crqxtzdTitle3}</span>
+					</div>
+					<p>$!{crqxtzd.crqxtzdText3}</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<footer>

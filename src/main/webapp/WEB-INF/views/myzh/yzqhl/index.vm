@@ -1,0 +1,119 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="yzqhlId" value="$!{yzqhl.id}"/>
+        <header>
+            <span>月子期护理编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>标题描述</font></a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="mainText" datatype="*" nullmsg="请输入标题描述">$!{yzqhl.mainText}</textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>图片信息</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- yzqhl img 1 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg1}&type=32" 
+                		width="200" height="134" id="myzhImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg1" id="myzhImg1-input" value="$!{yzqhl.yzqhlImg1}" />
+                    	<input type="file" id="myzhImg1" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle1}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 2 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg2}&type=32" 
+                		width="200" height="134" id="myzhImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg2" id="myzhImg2-input" value="$!{yzqhl.yzqhlImg2}" />
+                    	<input type="file" id="myzhImg2" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle2}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle2" />
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 3 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg3}&type=32" 
+                		width="200" height="134" id="myzhImg3-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg3" id="myzhImg3-input" value="$!{yzqhl.yzqhlImg3}" />
+                    	<input type="file" id="myzhImg3" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle3}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle3"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 4 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg4}&type=32" 
+                		width="200" height="134" id="myzhImg4-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg4" id="myzhImg4-input" value="$!{yzqhl.yzqhlImg4}" />
+                    	<input type="file" id="myzhImg4" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle4}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle4"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 5 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg5}&type=32" 
+                		width="200" height="134" id="myzhImg5-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg5" id="myzhImg5-input" value="$!{yzqhl.yzqhlImg5}" />
+                    	<input type="file" id="myzhImg5" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle5}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle5"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 6 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg6}&type=32" 
+                		width="200" height="134" id="myzhImg6-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg6" id="myzhImg6-input" value="$!{yzqhl.yzqhlImg6}" />
+                    	<input type="file" id="myzhImg6" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle6}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle6"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- yzqhl img 7 -->
+                	<td width="240"><img src="${request.contextPath}/home/showPhoto?id=$!{yzqhl.yzqhlImg7}&type=32" 
+                		width="200" height="134" id="myzhImg7-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="yzqhlImg7" id="myzhImg7-input" value="$!{yzqhl.yzqhlImg7}" />
+                    	<input type="file" id="myzhImg7" data-type="32" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{yzqhl.yzqhlTitle7}" 
+                			placeholder="标题" datatype="*" nullmsg="请输入标题" name="yzqhlTitle7"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

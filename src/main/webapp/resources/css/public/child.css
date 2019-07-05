@@ -466,7 +466,13 @@ section.myzh .myzh-content .myzh-content-main .mcm-list .mcm-list-text {
 section.myzh .myzh-content .myzh-content-main .mcm-list1 {
 	height: 267px;
 	overflow: hidden;
+	margin-right: 4px;
 	position: relative;
+}
+
+section.myzh .myzh-content .myzh-content-main .mcm-list1:nth-child(3),
+section.myzh .myzh-content .myzh-content-main .mcm-list1:nth-child(7) {
+	margin-right: 0;
 }
 
 section.myzh .myzh-content .myzh-content-main .mcm-list1:hover:after {

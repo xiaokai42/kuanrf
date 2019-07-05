@@ -23,11 +23,11 @@
                 	datatype="*" nullmsg="请选择发布时间" value="$!date.format('yyyy-MM-dd',$!{yqkt.activeDt})" /> </td>
            		<td align="right">首页显示图</td>
                 <td>
-                	<img src="${request.contextPath}/home/showPhoto?id=$!{yqkt.firstImg}&type=41" width="240" height="140" id="aboutImg1-img"/>
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{yqkt.firstImg}&type=31" width="240" height="140" id="aboutImg1-img"/>
                 </td>
                 <td>
                 	<input type="hidden" name="firstImg" id="aboutImg1-input" value="$!{yqkt.firstImg}" />
-                    <input type="file" id="aboutImg1" data-type="60" class="uploadImg" name="file" accept="image/*"/>
+                    <input type="file" id="aboutImg1" data-type="31" class="uploadImg" name="file" accept="image/*"/>
                 </td>
             </tr>
         </table>

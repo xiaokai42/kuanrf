@@ -55,13 +55,52 @@
 			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg}&type=30" width="1920" height="600" />
 		</div>
 	</section>
-	<!-- 标语大图 -->
 	<section class="myzh">
 		<div class="myzh-content">
-			<div class="myzh-content-title">孕 期 课 堂</div>
-			<p>$!{yqktImg.myzhText}</p>
-			<div class="myzh-content-main"></div>
-			<div id="page-bar" style="text-align: right;padding:20px;"></div>
+			<div class="myzh-content-title">宝 宝 护 理</div>
+			<p>$!{bbhl.mainText}</p>
+			<div class="myzh-content-main" style="justify-content: space-around;">
+				<a href="javascript:void(0)" class="mcm-list5" style="margin-bottom: 4px;">
+					<img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg1}&type=35" width="597" height="304" />
+					<div class="mcm-list1-text">
+						#if($!bbhl.bbhlImg1Text1 && $!bbhl.bbhlImg1Text1 != '')<p>· $!{bbhl.bbhlImg1Text1}</p>#end
+						#if($!bbhl.bbhlImg1Text2 && $!bbhl.bbhlImg1Text2 != '')<p>· $!{bbhl.bbhlImg1Text2}</p>#end
+						#if($!bbhl.bbhlImg1Text3 && $!bbhl.bbhlImg1Text3 != '')<p>· $!{bbhl.bbhlImg1Text3}</p>#end
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list5">
+					<img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg2}&type=35" width="597" height="304" />
+					<div class="mcm-list1-text">
+						#if($!bbhl.bbhlImg2Text1 && $!bbhl.bbhlImg2Text1 != '')<p>· $!{bbhl.bbhlImg2Text1}</p>#end
+						#if($!bbhl.bbhlImg2Text2 && $!bbhl.bbhlImg2Text2 != '')<p>· $!{bbhl.bbhlImg2Text2}</p>#end
+						#if($!bbhl.bbhlImg2Text3 && $!bbhl.bbhlImg2Text3 != '')<p>· $!{bbhl.bbhlImg2Text3}</p>#end
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list5">
+					<img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg3}&type=35" width="396" height="304" />
+					<div class="mcm-list1-text">
+						#if($!bbhl.bbhlImg3Text1 && $!bbhl.bbhlImg3Text1 != '')<p>· $!{bbhl.bbhlImg3Text1}</p>#end
+						#if($!bbhl.bbhlImg3Text2 && $!bbhl.bbhlImg3Text2 != '')<p>· $!{bbhl.bbhlImg3Text2}</p>#end
+						#if($!bbhl.bbhlImg3Text3 && $!bbhl.bbhlImg3Text3 != '')<p>· $!{bbhl.bbhlImg3Text3}</p>#end
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list5">
+					<img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg4}&type=35" width="396" height="304" />
+					<div class="mcm-list1-text">
+						#if($!bbhl.bbhlImg4Text1 && $!bbhl.bbhlImg4Text1 != '')<p>· $!{bbhl.bbhlImg4Text1}</p>#end
+						#if($!bbhl.bbhlImg4Text2 && $!bbhl.bbhlImg4Text2 != '')<p>· $!{bbhl.bbhlImg4Text2}</p>#end
+						#if($!bbhl.bbhlImg4Text3 && $!bbhl.bbhlImg4Text3 != '')<p>· $!{bbhl.bbhlImg4Text3}</p>#end
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list5">
+					<img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg5}&type=35" width="396" height="304" />
+					<div class="mcm-list1-text">
+						#if($!bbhl.bbhlImg5Text1 && $!bbhl.bbhlImg5Text1 != '')<p>· $!{bbhl.bbhlImg5Text1}</p>#end
+						#if($!bbhl.bbhlImg5Text2 && $!bbhl.bbhlImg5Text2 != '')<p>· $!{bbhl.bbhlImg5Text2}</p>#end
+						#if($!bbhl.bbhlImg5Text3 && $!bbhl.bbhlImg5Text3 != '')<p>· $!{bbhl.bbhlImg5Text3}</p>#end
+					</div>
+				</a>
+			</div>
 		</div>
 	</section>
 	<footer>

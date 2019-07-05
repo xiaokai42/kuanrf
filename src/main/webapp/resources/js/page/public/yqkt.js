@@ -65,7 +65,7 @@ $(function(){
 		for (var i=0; i<data.length; i++) {
 			var obj = data[i];
 			html += '<a data-uri="'+Util.getRootPath()+'/public/myzh/yqkt/detail?id='+obj.id+'" data-title="'+obj.title+'" class="mcm-list">'
-					+ '<img src="'+Util.getRootPath()+'/public/showPhoto?id='+obj.firstImg+'&type=41"  width="296" height="222" />'
+					+ '<img src="'+Util.getRootPath()+'/public/showPhoto?id='+obj.firstImg+'&type=31"  width="296" height="222" />'
 					+ '<div class="mcm-list-text">'+formart(obj.title, 20)+'</div></a>';
 		}
 		$(".myzh-content-main").html(html);

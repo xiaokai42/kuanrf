@@ -28,6 +28,7 @@ import com.xiaokai.kuanrf.service.web.AboutService;
 import com.xiaokai.kuanrf.service.web.ActiveService;
 import com.xiaokai.kuanrf.service.web.AdvantageService;
 import com.xiaokai.kuanrf.service.web.HomeService;
+import com.xiaokai.kuanrf.service.web.MyzhService;
 import com.xiaokai.kuanrf.service.web.StoreService;
 import com.xiaokai.kuanrf.service.web.YqktService;
 import com.xiaokai.kuanrf.util.FileUtil;
@@ -69,6 +70,9 @@ public class PublicController extends BaseController{
     
     @Resource
     private YqktService yqktService;
+    
+    @Resource
+    private MyzhService myzhService;
 
     /**
      * 主页跳转
@@ -239,6 +243,66 @@ public class PublicController extends BaseController{
         ModelAndView view = createLayoutView("public/myzh/yqkt/detail.vm", "common/main");
         view.addObject("head_path", "public/myzh/yqkt/detailHead.vm");
         view.addObject("yqkt", yqktService.findbyId(request.getParameter("id")));
+        return view;
+    }
+
+    /**
+     * 母婴照护-月子期护理跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "myzh/yzqhl")
+    public ModelAndView yzqhl(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/myzh/yzqhl/index.vm", null);
+        view.addObject("head_path", "public/myzh/yzqhl/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("yzqhl", myzhService.findYzqhlInfo());
+        return view;
+    }
+
+    /**
+     * 母婴照护-产褥期形体指导跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "myzh/crqxtzd")
+    public ModelAndView crqxtzd(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/myzh/crqxtzd/index.vm", null);
+        view.addObject("head_path", "public/myzh/crqxtzd/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("crqxtzd", myzhService.findCrqxtzdInfo());
+        return view;
+    }
+
+    /**
+     * 母婴照护-营养膳食跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "myzh/yyss")
+    public ModelAndView yyss(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/myzh/yyss/index.vm", null);
+        view.addObject("head_path", "public/myzh/yyss/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("yyss", myzhService.findYyssInfo());
+        return view;
+    }
+
+    /**
+     * 母婴照护-宝宝护理跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "myzh/bbhl")
+    public ModelAndView bbhl(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/myzh/bbhl/index.vm", null);
+        view.addObject("head_path", "public/myzh/bbhl/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("bbhl", myzhService.findBbhlInfo());
         return view;
     }
     

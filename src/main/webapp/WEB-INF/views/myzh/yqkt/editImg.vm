@@ -4,11 +4,11 @@
         <table width="100%">
             <tr>
                 <td width="240">
-                	<img src="${request.contextPath}/home/showPhoto?id=$!{activeImg.bannerImg}&type=60" width="200" height="63" id="aboutImg1-img"/>
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{activeImg.bannerImg}&type=30" width="200" height="63" id="aboutImg1-img"/>
                 </td>
                 <td>
                     <input type="hidden" name="bannerImg" id="aboutImg1-input" value="$!{activeImg.bannerImg}" />
-                    <input type="file" id="aboutImg1" data-type="60" class="uploadImg" name="file" accept="image/*"/>
+                    <input type="file" id="aboutImg1" data-type="30" class="uploadImg" name="file" accept="image/*"/>
                 </td>
             </tr>
             <tr>

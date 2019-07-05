@@ -1,0 +1,153 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="bbhlId" value="$!{bbhl.id}"/>
+        <header>
+            <span>宝宝护理编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>标题描述</font></a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="mainText" datatype="*" nullmsg="请输入标题描述">$!{bbhl.mainText}</textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>图片信息</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<!-- bbhl img 1 -->
+                	<td width="240" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg1}&type=35" 
+                		width="200" height="154" id="myzhImg1-img"/></td>
+                	<td width="200" rowspan="3">
+                		<input type="hidden" name="bbhlImg1" id="myzhImg1-input" value="$!{bbhl.bbhlImg1}" />
+                    	<input type="file" id="myzhImg1" data-type="35" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg1Text1}" 
+                			placeholder="描述"  name="bbhlImg1Text1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg1Text2}" 
+                			placeholder="描述"  name="bbhlImg1Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg1Text2}" 
+                			placeholder="描述"  name="bbhlImg1Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- bbhl img 2 -->
+                	<td width="240" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg2}&type=35" 
+                		width="200" height="154" id="myzhImg2-img"/></td>
+                	<td width="200" rowspan="3">
+                		<input type="hidden" name="bbhlImg2" id="myzhImg2-input" value="$!{bbhl.bbhlImg2}" />
+                    	<input type="file" id="myzhImg2" data-type="35" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg2Text1}" 
+                			placeholder="描述"  name="bbhlImg2Text1" />
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg2Text2}" 
+                			placeholder="描述"  name="bbhlImg2Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg2Text3}" 
+                			placeholder="描述"  name="bbhlImg2Text3"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- bbhl img 3 -->
+                	<td width="240" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg3}&type=35" 
+                		width="200" height="154" id="myzhImg3-img"/></td>
+                	<td width="200" rowspan="3">
+                		<input type="hidden" name="bbhlImg3" id="myzhImg3-input" value="$!{bbhl.bbhlImg3}" />
+                    	<input type="file" id="myzhImg3" data-type="35" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg3Text1}" 
+                			placeholder="描述"  name="bbhlImg3Text1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg3Text2}" 
+                			placeholder="描述"  name="bbhlImg3Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg3Text3}" 
+                			placeholder="描述"  name="bbhlImg3Text3"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- bbhl img 4 -->
+                	<td width="240" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg4}&type=35" 
+                		width="200" height="154" id="myzhImg4-img"/></td>
+                	<td width="200" rowspan="3">
+                		<input type="hidden" name="bbhlImg4" id="myzhImg4-input" value="$!{bbhl.bbhlImg4}" />
+                    	<input type="file" id="myzhImg4" data-type="35" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg4Text1}" 
+                			placeholder="描述"  name="bbhlImg4Text1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg4Text2}" 
+                			placeholder="描述"  name="bbhlImg4Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg4Text3}" 
+                			placeholder="描述"  name="bbhlImg4Text3"/>
+                	</td>
+                </tr>
+                <tr>
+                	<!-- bbhl img 5 -->
+                	<td width="240" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{bbhl.bbhlImg5}&type=35" 
+                		width="200" height="154" id="myzhImg5-img"/></td>
+                	<td width="200" rowspan="3">
+                		<input type="hidden" name="bbhlImg5" id="myzhImg5-input" value="$!{bbhl.bbhlImg5}" />
+                    	<input type="file" id="myzhImg5" data-type="35" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg5Text1}" 
+                			placeholder="描述"  name="bbhlImg5Text1"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg5Text2}" 
+                			placeholder="描述"  name="bbhlImg5Text2"/>
+                	</td>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{bbhl.bbhlImg5Text3}" 
+                			placeholder="描述"  name="bbhlImg5Text3"/>
+                	</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

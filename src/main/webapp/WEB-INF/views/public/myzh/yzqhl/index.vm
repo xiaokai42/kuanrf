@@ -55,13 +55,40 @@
 			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg}&type=30" width="1920" height="600" />
 		</div>
 	</section>
-	<!-- 标语大图 -->
 	<section class="myzh">
 		<div class="myzh-content">
-			<div class="myzh-content-title">孕 期 课 堂</div>
-			<p>$!{yqktImg.myzhText}</p>
-			<div class="myzh-content-main"></div>
-			<div id="page-bar" style="text-align: right;padding:20px;"></div>
+			<div class="myzh-content-title">月 子 期 护 理</div>
+			<p>$!{yzqhl.mainText}</p>
+			<div class="myzh-content-main">
+				<a href="javascript:void(0)" class="mcm-list1" style="margin-bottom: 4px;">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg1}&type=32" width="396" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle1} ·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg2}&type=32" width="396" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle2} ·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg3}&type=32" width="396" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle3} ·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg4}&type=32" width="296" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle4} ·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg5}&type=32" width="296" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle5}·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg6}&type=32" width="296" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle6} ·</div>
+				</a>
+				<a href="javascript:void(0)" class="mcm-list1">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{yzqhl.yzqhlImg7}&type=32" width="296" height="267" />
+					<div class="mcm-list1-text">· $!{yzqhl.yzqhlTitle7} ·</div>
+				</a>
+			</div>
 		</div>
 	</section>
 	<footer>
