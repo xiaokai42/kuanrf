@@ -13,6 +13,7 @@ import org.springframework.util.CollectionUtils;
 
 import com.alibaba.druid.util.StringUtils;
 import com.xiaokai.kuanrf.entity.web.Home;
+import com.xiaokai.kuanrf.entity.web.Preference;
 import com.xiaokai.kuanrf.service.web.HomeService;
 
 import cn.proem.core.dao.GeneralDao;
@@ -66,6 +67,43 @@ public class HomeServiceImpl implements HomeService
         } catch (Exception e)
         {
             LOG.error("新增首页信息异常", e);
+        }
+        return result;
+    }
+
+    @Override
+    public Preference findPreferenceInfo()
+    {
+        List<Preference> list = generalDao.queryByCriteria(Preference.class, null, new Order[] {}, 0, 1);
+        if (list.size() > 0) {
+            return list.get(0);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    @Transactional
+    public int savePreference(Map<String, Object> obj)
+    {
+        int result = 0;// 返回结果:0-失败;1-成功
+        try
+        {
+            if (!CollectionUtils.isEmpty(obj))
+            {
+                Preference preference = BeanUtils.cloneObject(Preference.class, obj);
+                // 判断是新增或修改
+                if (StringUtils.isEmpty(preference.getId())) {
+                    generalDao.save(preference);
+                    result = 1;
+                } else {    
+                    generalDao.update(preference);
+                    result = 1;
+                }
+            }
+        } catch (Exception e)
+        {
+            LOG.error("新增优惠信息异常", e);
         }
         return result;
     }

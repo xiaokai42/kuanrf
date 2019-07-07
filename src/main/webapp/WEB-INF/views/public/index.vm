@@ -54,8 +54,12 @@
 		<div class="main-img-wrapper">
 			<div class="shutter">
 				<div class="shutter-img">
-					<a href="#" data-shutter-title="Iron Man"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg1}" alt="#"></a>
-					<a href="#" data-shutter-title="Supe Man"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg2}" alt="#"></a>
+					<a href="${request.contextPath}/public/preference" data-shutter-title="Iron Man">
+						<img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg1}" alt="#">
+					</a>
+					<a href="${request.contextPath}/public/preference" data-shutter-title="Supe Man">
+						<img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg2}" alt="#">
+					</a>
 					#if($!{home.bannerImg3})
 						<a href="#" data-shutter-title="The Hulk"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg3}" alt="#"></a>
 					#end
@@ -68,9 +72,11 @@
 					<li class="next"></li>
 				</ul>
 			</div>
-			<!-- <img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg1}&type=10" width="1920" height="984" /> -->
 		</div>
 	</section>
+	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=$!{preference.qq1}&site=qq&menu=yes" class="qq" title="点此咨询">
+		<img src="${request.contextPath}/resources/images/homepage/qq.png" width="221" height="317" />
+	</a>
 	<!-- 标语大图 -->
 	<section class="slogan-img">
 		<div class="slogan-img-wrapper">
@@ -174,21 +180,21 @@
 	<!-- 发现更多 -->
 	<section class="more">
 		<div class="more-content">
-			<div class="mc-box">
+			<a href="${request.contextPath}/public/preference" class="mc-box">
 				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg1}&type=14" width="387" height="288" />
 				<span>$!{home.moreText1}</span>
 				<div class="detail"></div>
-			</div>
-			<div class="mc-box">
+			</a>
+			<a href="${request.contextPath}/public/active" class="mc-box">
 				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg2}&type=14" width="387" height="288" />
 				<span>$!{home.moreText2}</span>
 				<div class="detail"></div>
-			</div>
-			<div class="mc-box">
+			</a>
+			<a href="#" class="mc-box">
 				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg3}&type=14" width="387" height="288" />
 				<span>$!{home.moreText3}</span>
 				<div class="detail"></div>
-			</div>
+			</a>
 			<a title="返回顶部" class="returnTop"></a>
 		</div>
 	</section>

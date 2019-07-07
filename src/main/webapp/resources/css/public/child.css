@@ -232,6 +232,13 @@ nav .nav-secound {
 	}
 }
 
+a.qq {
+	top: 27%;
+	right: 0;
+	z-index: 99999;
+	position: fixed;
+}
+
 /* 首页大图 */
 section.main-img {
 	width: 100%;
@@ -1135,6 +1142,50 @@ section.recruit .recruit-content .recruit-box .rb-bottom span {
 section.recruit .recruit-content .recruit-box .rb-bottom span img {
 	margin-right: 5px;
 	vertical-align: -3px;
+}
+
+/* 最新优惠 */
+section.preference {
+	width: 100%;
+	min-height: 400px;
+	box-sizing: border-box;
+	background: url(../../images/active/content-bg.jpg);
+}
+
+section.preference .preference-content {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	padding: 120px 0 40px 0;
+}
+
+section.preference .preference-content .pc-title {
+	width: 530px;
+	height: 96px;
+	margin: 0 auto;
+	font-size: 32px;
+	line-height: 96px;
+	text-align: center;
+	margin-bottom: 100px;
+	background: url(../../images/child/font-kuanrf.png) no-repeat;
+}
+
+section.preference .preference-content img {
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+section.preference .preference-content img.bg {
+	margin-left: -140px;
+	position: relative;
+	z-index: 0;
+}
+
+section.preference .preference-content img.content {
+	margin-top: -1800px;
+	box-shadow:4px 4px 10px #999;
 }
 
 /* footer */

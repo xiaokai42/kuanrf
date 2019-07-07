@@ -67,6 +67,38 @@ public class HomeController extends BaseController
         
         return resultMap;
     }
+
+    /**
+     * 最新优惠
+     *
+     * @author xiaokai
+     * 2019年6月26日
+     */
+    @RequestMapping(value = "preference", method = RequestMethod.GET)
+    public ModelAndView preference(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("preference/index.vm", null);
+        view.addObject("head_path", "preference/head.vm");
+        view.addObject("preference", homeService.findPreferenceInfo());
+        return view;
+    }
+
+    /**
+     * 保存优惠信息
+     * @author xiaokai
+     * 2019年6月26日
+     */
+    @ResponseBody
+    @RequestMapping(value = "preference/save")
+    public ModelMap savePreference(HttpServletRequest request, @RequestBody Map<String, Object> obj)
+    {
+        ModelMap resultMap = new ModelMap();
+        
+        int code = 0;
+        code = homeService.savePreference(obj);
+        resultMap.put("code", code);
+        
+        return resultMap;
+    }
     
     /**
      * 显示图片

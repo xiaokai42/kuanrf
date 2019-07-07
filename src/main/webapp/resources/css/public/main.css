@@ -240,6 +240,13 @@ section.main-img {
 	position: relative;
 }
 
+a.qq {
+	top: 27%;
+	right: 0;
+	z-index: 99999;
+	position: fixed;
+}
+
 section.main-img .main-img-wrapper {
     left: 50%;
     width: 1920px;

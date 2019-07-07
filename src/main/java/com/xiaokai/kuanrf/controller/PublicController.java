@@ -388,6 +388,20 @@ public class PublicController extends BaseController{
         view.addObject("list", chxfService.findNxsmhyInfo());
         return view;
     }
+
+    /**
+     * 最新优惠
+     *
+     * @return
+     */
+    @RequestMapping(value = "preference")
+    public ModelAndView preference(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/preference/index.vm", null);
+        view.addObject("head_path", "public/preference/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
+        return view;
+    }
     
     /**
      * 上传图片

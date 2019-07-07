@@ -24,3 +24,9 @@ section.active-text .al-content .al-content-main .text-title {
 	padding-bottom: 40px;
 }
 
+a.qq {
+	top: 27%;
+	right: 0;
+	z-index: 99999;
+	position: fixed;
+}

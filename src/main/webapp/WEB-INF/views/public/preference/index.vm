@@ -55,36 +55,17 @@
 	<!-- 首页大图 -->
 	<section class="main-img">
 		<div class="main-img-wrapper">
-			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg}&type=30" width="1920" height="600" />
+			<img src="${request.contextPath}/public/showPhoto?id=$!{preference.bannerImg}&type=90" width="1920" height="600" />
 		</div>
 	</section>
-	<section class="myzh">
-		<div class="myzh-content">
-			<div class="myzh-content-title">产 褥 期 形 体 指 导</div>
-			<p>$!{crqxtzd.mainText}</p>
-			<div class="myzh-content-main" style="justify-content: space-around;">
-				<div class="mcm-list2">
-					<div class="mcm-list2-title">
-						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg1}&type=33" width="114" height="114" />
-						<span>$!{crqxtzd.crqxtzdTitle1}</span>
-					</div>
-					<p>$!{crqxtzd.crqxtzdText1}</p>
-				</div>
-				<div class="mcm-list2">
-					<div class="mcm-list2-title">
-						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg2}&type=33" width="114" height="114" />
-						<span>$!{crqxtzd.crqxtzdTitle2}</span>
-					</div>
-					<p>$!{crqxtzd.crqxtzdText2}</p>
-				</div>
-				<div class="mcm-list2">
-					<div class="mcm-list2-title">
-						<img src="${request.contextPath}/home/showPhoto?id=$!{crqxtzd.crqxtzdImg3}&type=33" width="114" height="114" />
-						<span>$!{crqxtzd.crqxtzdTitle3}</span>
-					</div>
-					<p>$!{crqxtzd.crqxtzdText3}</p>
-				</div>
-			</div>
+	<!-- 解放碑店 -->
+	<section class="preference">
+		<div class="preference-content">
+			<div class="pc-title">最 新 优 惠</div>
+			<img src="${request.contextPath}/resources/images/homepage/preference-bg.png" class="bg" width="1436" height="1685" />
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=$!{preference.qq1}&site=qq&menu=yes" target="_blank" title="点此咨询">
+				<img src="${request.contextPath}/public/showPhoto?id=$!{preference.img}&type=91" class="content" width="1200" height="1687" />
+			</a>
 		</div>
 	</section>
 	<footer>

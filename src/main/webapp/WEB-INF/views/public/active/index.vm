@@ -49,6 +49,9 @@
 		</div>
 		<div class="nav-secound"></div>
 	</nav>
+	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=$!{preference.qq1}&site=qq&menu=yes" class="qq" title="点此咨询">
+		<img src="${request.contextPath}/resources/images/homepage/qq.png" width="221" height="317" />
+	</a>
 	<!-- 首页大图 -->
 	<section class="main-img">
 		<div class="main-img-wrapper">
