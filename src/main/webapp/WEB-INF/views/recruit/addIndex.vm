@@ -1,0 +1,140 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" value="$!{recruit.id}"/>
+        <header>
+            <span>人才招聘</span>
+            <div class="btn-bar">
+                <button type="button" class="btn-primary add" onclick="history.go(-1)">返回</button>
+                <button id="formSubmit" type="button" class="btn-primary add">保存</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>招聘信息</font></a>
+        </div>
+        <table class="table-form">
+            <tr>
+                <td align="right">职位</td>
+                <td colspan="2"><input type="text" name="work" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入职位" value="$!{recruit.work}"/></td>
+                <td align="right">职位薪资</td>
+                <td><input type="text" name="money" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入职位薪资" value="$!{recruit.money}"/></td>
+            </tr>
+            <tr>
+                <td align="right">联系人</td>
+                <td colspan="2"><input type="text" name="person" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入联系人" value="$!{recruit.person}"/></td>
+                <td align="right">联系电话</td>
+                <td><input type="text" name="phone" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入联系电话" value="$!{recruit.phone}"/></td>
+            </tr>
+            <tr>
+                <td align="right">职位icon</td>
+                <td width="50">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{recruit.recruitIcon}&type=81" width="37" height="50" id="aboutImg1-img"/>
+                </td>
+                <td>
+                	<input type="hidden" name="recruitIcon" id="aboutImg1-input" value="$!{recruit.recruitIcon}" />
+                    <input type="file" id="aboutImg1" data-type="81" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+                <td align="right">发布状态</td>
+                <td>
+                	<select name="status" style="width: 100%;">
+                        <option value="1" #if($recruit.status=="1") selected #end>已发布</option>
+                        <option value="0" #if($recruit.status=="0") selected #end>未发布</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>岗位要求</font></a>
+            <input type="hidden" name="duty" id="hiddenDuty" value="$!{recruit.duty}" />
+        </div>
+        <table class="table-form duty">
+        	<tbody>
+        		#if($!recruit.duty)
+        			#if($item.duty.indexOf("-")!=-1)
+	            		<tr>
+	        			#foreach ($ele in $recruit.duty.split("-"))
+	        				<td><input type="text" class="input-form" style="width: 100%;" value="${ele}" /></td>
+	        				#if($velocityCount%2==0)
+	        					</tr>
+	        				#end
+	        				#if(!$foreach.hasNext)
+	        					#if($velocityCount%2!=0)
+	        						<td><input type="text" class="input-form" style="width: 100%;" /></td></tr>
+	        					#end
+	        				#end
+	        			#end
+	        		#else
+	        			<tr>
+	        				<td><input type="text" class="input-form" style="width: 100%;" value="$!{recruit.duty}" /></td>
+	        				<td><input type="text" class="input-form" style="width: 100%;" /></td>
+	        			</tr>
+	        		#end
+        		#else
+		            <tr>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		            </tr>
+		            <tr>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		            </tr>
+        		#end
+        	</tbody>
+        	<tfoot>
+	            <tr>
+	            	<td colspan="2" align="right">
+	            		<button id="addDuty" type="button" class="btn-primary">添加岗位要求</button>
+	            	</td>
+	            </tr>
+        	</tfoot>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>公司福利</font></a>
+            <input type="hidden" name="welfare" id="hiddenWelfare" value="$!{recruit.welfare}" />
+        </div>
+        <table class="table-form welfare">
+        	<tbody>
+	            #if($!recruit.welfare)
+	            	#if($item.welfare.indexOf("-")!=-1)
+	            		<tr>
+	        			#foreach ($ele in $recruit.welfare.split("-"))
+	        				<td><input type="text" class="input-form" style="width: 100%;" value="${ele}" /></td>
+	        				#if($velocityCount%2==0)
+	        					</tr>
+	        				#end
+	        				#if(!$foreach.hasNext)
+	        					#if($velocityCount%2!=0)
+	        						<td><input type="text" class="input-form" style="width: 100%;" /></td></tr>
+	        					#end
+	        				#end
+	        			#end
+	        		#else
+	        			<tr>
+	        				<td><input type="text" class="input-form" style="width: 100%;" value="$!{recruit.welfare}" /></td>
+	        				<td><input type="text" class="input-form" style="width: 100%;" /></td>
+	        			</tr>
+	        		#end
+        		#else
+		            <tr>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		            </tr>
+		            <tr>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		                <td><input type="text" class="input-form" style="width: 100%;" /></td>
+		            </tr>
+        		#end
+        	</tbody>
+        	<tfoot>
+	            <tr>
+	            	<td colspan="2" align="right">
+	            		<button id="welfare" type="button" class="btn-primary">添加公司福利</button>
+	            	</td>
+	            </tr>
+        	</tfoot>
+        </table>
+    </form>
+</section>

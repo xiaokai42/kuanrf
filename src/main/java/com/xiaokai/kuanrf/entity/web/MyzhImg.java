@@ -51,6 +51,26 @@ public class MyzhImg extends BaseEntity
         this.bannerImg = bannerImg;
     }
 
+    public String getBannerImg1()
+    {
+        return bannerImg1;
+    }
+
+    public void setBannerImg1(String bannerImg1)
+    {
+        this.bannerImg1 = bannerImg1;
+    }
+
+    public String getBannerImg2()
+    {
+        return bannerImg2;
+    }
+
+    public void setBannerImg2(String bannerImg2)
+    {
+        this.bannerImg2 = bannerImg2;
+    }
+
     public String getMyzhText()
     {
         return myzhText;

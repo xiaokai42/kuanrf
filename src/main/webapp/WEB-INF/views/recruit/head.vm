@@ -1,0 +1,2 @@
+<link href="$!{request.contextPath}/resources/css/main/index.css" rel="stylesheet" />
+<script src="${request.contextPath}/resources/js/page/recruit/index.js"></script>

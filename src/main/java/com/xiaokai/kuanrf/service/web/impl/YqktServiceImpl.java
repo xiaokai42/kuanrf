@@ -127,7 +127,20 @@ public class YqktServiceImpl implements YqktService
                     generalDao.save(activeImg);
                     result = 1;
                 } else {    
-                    generalDao.update(activeImg);
+                    MyzhImg myzhImg = generalDao.findById(activeImg.getId(), MyzhImg.class);
+                    if (StringUtils.isNotEmpty(activeImg.getBannerImg())) {
+                        myzhImg.setBannerImg(activeImg.getBannerImg());
+                    }
+                    if (StringUtils.isNotEmpty(activeImg.getBannerImg1())) {
+                        myzhImg.setBannerImg1(activeImg.getBannerImg1());
+                    }
+                    if (StringUtils.isNotEmpty(activeImg.getBannerImg2())) {
+                        myzhImg.setBannerImg2(activeImg.getBannerImg2());
+                    }
+                    if (StringUtils.isNotEmpty(activeImg.getMyzhText())) {
+                        myzhImg.setBannerImg2(activeImg.getMyzhText());
+                    }
+                    generalDao.update(myzhImg);
                     result = 1;
                 }
             }

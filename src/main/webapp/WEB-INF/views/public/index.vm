@@ -44,7 +44,7 @@
 				</a>
 				<a class="nav-child" href="${request.contextPath}/public/active">精彩活动</a>
 				<a class="nav-child" href="${request.contextPath}/public/about">联系我们</a>
-				<a class="nav-child" href="child/recruit.html">人才招聘</a>
+				<a class="nav-child" href="${request.contextPath}/public/recruit">人才招聘</a>
 			</div>
 		</div>
 		<div class="nav-secound"></div>
@@ -56,8 +56,12 @@
 				<div class="shutter-img">
 					<a href="#" data-shutter-title="Iron Man"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg1}" alt="#"></a>
 					<a href="#" data-shutter-title="Supe Man"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg2}" alt="#"></a>
-					<a href="#" data-shutter-title="The Hulk"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg3}" alt="#"></a>
-					<a href="#" data-shutter-title="The your"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg4}" alt="#"></a>
+					#if($!{home.bannerImg3})
+						<a href="#" data-shutter-title="The Hulk"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg3}" alt="#"></a>
+					#end
+					#if($!{home.bannerImg4})
+						<a href="#" data-shutter-title="The your"><img src="${request.contextPath}/public/showPhoto?id=$!{home.bannerImg4}" alt="#"></a>
+					#end
 				</div>
 				<ul class="shutter-btn">
 					<li class="prev"></li>

@@ -29,8 +29,7 @@
                     <input type="file" id="homeImg2" data-type="10" class="uploadImg" name="file" accept="image/*"/>
                 </td>
             </tr>
-            <tr>
-            	<!-- banner img 3 -->
+            <!-- <tr>
                 <td width="240">
                 	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg3}&type=10" width="200" height="99" id="homeImg3-img"/>
                 </td>
@@ -38,7 +37,6 @@
                     <input type="hidden" name="bannerImg3" id="homeImg3-input" value="$!{home.bannerImg3}" />
                     <input type="file" id="homeImg3" data-type="10" class="uploadImg" name="file" accept="image/*"/>
                 </td>
-                <!-- banner img 4 -->
                 <td width="240">
                 	<img src="${request.contextPath}/home/showPhoto?id=$!{home.bannerImg4}&type=10" width="200" height="99" id="homeImg4-img"/>
                 </td>
@@ -46,7 +44,7 @@
                     <input type="hidden" name="bannerImg4" id="homeImg4-input" value="$!{home.bannerImg4}" />
                     <input type="file" id="homeImg4" data-type="10" class="uploadImg" name="file" accept="image/*"/>
                 </td>
-            </tr>
+            </tr> -->
         </table>
         <div class="person">
             <a class="person-title"><font>品牌优势</font></a>

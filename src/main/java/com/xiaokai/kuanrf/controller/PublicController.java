@@ -29,6 +29,7 @@ import com.xiaokai.kuanrf.service.web.ActiveService;
 import com.xiaokai.kuanrf.service.web.AdvantageService;
 import com.xiaokai.kuanrf.service.web.HomeService;
 import com.xiaokai.kuanrf.service.web.MyzhService;
+import com.xiaokai.kuanrf.service.web.RecruitService;
 import com.xiaokai.kuanrf.service.web.StoreService;
 import com.xiaokai.kuanrf.service.web.YqktService;
 import com.xiaokai.kuanrf.util.FileUtil;
@@ -73,6 +74,9 @@ public class PublicController extends BaseController{
     
     @Resource
     private MyzhService myzhService;
+
+    @Resource
+    private RecruitService recruitService;
 
     /**
      * 主页跳转
@@ -303,6 +307,21 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("bbhl", myzhService.findBbhlInfo());
+        return view;
+    }
+
+    /**
+     * 人才招聘跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "recruit")
+    public ModelAndView recruit(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/recruit/index.vm", null);
+        view.addObject("head_path", "public/recruit/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("list", recruitService.findRecruitInfo());
         return view;
     }
     

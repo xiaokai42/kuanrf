@@ -28,6 +28,12 @@ public class Recruit extends BaseEntity
      */
     @Column(length = 100)
     private String work;
+    
+    /**
+     * 职位薪资
+     */
+    @Column(length = 100)
+    private String money;
 
     /**
      * 岗位要求
@@ -76,6 +82,16 @@ public class Recruit extends BaseEntity
     public void setWork(String work)
     {
         this.work = work;
+    }
+
+    public String getMoney()
+    {
+        return money;
+    }
+
+    public void setMoney(String money)
+    {
+        this.money = money;
     }
 
     public String getDuty()
