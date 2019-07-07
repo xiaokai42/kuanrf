@@ -1,0 +1,51 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" value="$!{nxsmhy.id}"/>
+        <header>
+            <span>女性私密护养</span>
+            <div class="btn-bar">
+                <button type="button" class="btn-primary add" onclick="history.go(-1)">返回</button>
+                <button id="formSubmit" type="button" class="btn-primary add">保存</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>项目信息</font></a>
+        </div>
+        <table class="table-form">
+        	<tr>
+            	<td width="187" rowspan="3"><img src="${request.contextPath}/home/showPhoto?id=$!{nxsmhy.img}&type=53" 
+            		width="147" height="200" id="myzhImg1-img"/></td>
+            	<td width="200" rowspan="3">
+            		<input type="hidden" name="img" id="myzhImg1-input" value="$!{nxsmhy.img}" />
+                	<input type="file" id="myzhImg1" data-type="53" class="uploadImg" name="file" accept="image/*"/>
+            	</td>
+            	<td width="100" align="right">项目名称</td>
+                <td colspan="2"><input type="text" name="title" class="input-form" style="width: 100%;"
+                	datatype="*" nullmsg="请输入项目名称" value="$!{nxsmhy.title}"/></td>
+            </tr>
+            <tr>
+            	<td align="right">发布状态</td>
+                <td colspan="2">
+                	<select name="status" style="width: 100%;">
+                        <option value="1" #if($nxsmhy.status=="1") selected #end>已发布</option>
+                        <option value="0" #if($nxsmhy.status=="0") selected #end>未发布</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">项目图标</td>
+                <td width="120"><img src="${request.contextPath}/home/showPhoto?id=$!{nxsmhy.icon}&type=53" 
+            		width="80" height="48" id="myzhImg2-img"/></td>
+            	<td width="200">
+            		<input type="hidden" name="icon" id="myzhImg2-input" value="$!{nxsmhy.icon}" />
+                	<input type="file" id="myzhImg2" data-type="53" class="uploadImg" name="file" accept="image/*"/>
+            	</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <textarea name="text" datatype="*" nullmsg="请输入描述">$!{nxsmhy.text}</textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>

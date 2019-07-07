@@ -36,10 +36,10 @@
 				<a class="nav-child has-child" href="#">
 					产后修复
 					<div class="menu-child">
-						<span data-uri="chxf-1.html">产后体质调理</span>
-						<span data-uri="chxf-2.html">产后形体重塑</span>
-						<span data-uri="chxf-3.html">女性私密维养</span>
-						<span data-uri="chxf-4.html">舒缓调理</span>
+						<span data-uri="/public/chxf/chtztl">产后体质调理</span>
+						<span data-uri="/public/chxf/chtxcs">产后形体重塑</span>
+						<span data-uri="/public/chxf/nxsmhy">女性私密维养</span>
+						<span data-uri="/public/chxf/shtl">舒缓调理</span>
 					</div>
 				</a>
 				<a class="nav-child" href="${request.contextPath}/public/active">精彩活动</a>

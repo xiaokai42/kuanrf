@@ -649,7 +649,31 @@ section.chxf .chxf-content .chxf-content-title {
 	line-height: 96px;
 	text-align: center;
 	margin-bottom: 60px;
-	background: url(../image/child/font-kuanrf.png) no-repeat;
+	background: url(../../images/child/font-kuanrf.png) no-repeat;
+}
+
+section.chxf .chxf-content .chxf-content-main {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-around;
+}
+
+section.chxf .chxf-content .chxf-content-main .ccm-box {
+	width: 560px;
+}
+
+section.chxf .chxf-content .chxf-content-main .ccm-box h1 {
+	font-size: 18px;
+	line-height: 36px;
+}
+
+section.chxf .chxf-content .chxf-content-main .ccm-box p {
+	padding: 0 10px;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 36px;
+	line-height: 36px;
 }
 
 section.chxf .chxf-content p {
@@ -657,6 +681,43 @@ section.chxf .chxf-content p {
 	line-height: 32px;
 	text-indent: 32px;
 	margin-bottom: 60px;
+}
+
+section.chxf .chxf-content .chxf-content-main .nxsmhy-box {
+	width: 1200px;
+	height: 400px;
+	display: flex;
+	margin: 20px 0;
+	position: relative;
+	padding: 30px 100px;
+	box-sizing: border-box;
+	border: 2px #298ad9 solid;
+}
+
+section.chxf .chxf-content .chxf-content-main .nxsmhy-box h1 {
+	top: 120px;
+	left: -100px;
+	width: 200px;
+	height: 60px;
+	display: block;
+	font-size: 24px;
+	background: #fff;
+	line-height: 48px;
+	position: absolute;
+}
+
+section.chxf .chxf-content .chxf-content-main .nxsmhy-box .icon {
+	top: 190px;
+	left: -40px;
+	position: absolute;
+}
+
+section.chxf .chxf-content .chxf-content-main .nxsmhy-box p {
+	width: 800px;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 48px;
+	margin-right: 40px;
 }
 
 /* 宽仁妇孺妈妈学院 */

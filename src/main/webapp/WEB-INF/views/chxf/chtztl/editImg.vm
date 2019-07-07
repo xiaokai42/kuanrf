@@ -1,0 +1,21 @@
+<section>
+    <form id="bean-form" style="padding: 20px;">
+        <input type="hidden" name="id" id="aboutId" value="$!{activeImg.id}"/>
+        <table width="100%">
+            <tr>
+                <td width="240">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{activeImg.bannerImg2}&type=50" width="200" height="63" id="aboutImg1-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg2" id="aboutImg1-input" value="$!{activeImg.bannerImg2}" />
+                    <input type="file" id="aboutImg1" data-type="50" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+            <tr>
+            	<td align="right" colspan="2">
+	                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            	</td>
+            </tr>
+        </table>
+    </form>
+</section>

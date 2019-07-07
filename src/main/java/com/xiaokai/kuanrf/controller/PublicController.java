@@ -27,6 +27,7 @@ import com.xiaokai.kuanrf.service.manage.AttaService;
 import com.xiaokai.kuanrf.service.web.AboutService;
 import com.xiaokai.kuanrf.service.web.ActiveService;
 import com.xiaokai.kuanrf.service.web.AdvantageService;
+import com.xiaokai.kuanrf.service.web.ChxfService;
 import com.xiaokai.kuanrf.service.web.HomeService;
 import com.xiaokai.kuanrf.service.web.MyzhService;
 import com.xiaokai.kuanrf.service.web.RecruitService;
@@ -77,6 +78,9 @@ public class PublicController extends BaseController{
 
     @Resource
     private RecruitService recruitService;
+    
+    @Resource
+    private ChxfService chxfService;
 
     /**
      * 主页跳转
@@ -322,6 +326,66 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("list", recruitService.findRecruitInfo());
+        return view;
+    }
+
+    /**
+     * 产后修复-产后体质调理跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "chxf/chtztl")
+    public ModelAndView chtztl(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/chxf/chtztl/index.vm", null);
+        view.addObject("head_path", "public/chxf/chtztl/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("chxfImg", yqktService.findMyzhImgInfo());
+        view.addObject("chtztl", chxfService.findChtztlInfo());
+        return view;
+    }
+
+    /**
+     * 产后修复-产后体形重塑跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "chxf/chtxcs")
+    public ModelAndView chtxcs(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/chxf/chtxcs/index.vm", null);
+        view.addObject("head_path", "public/chxf/chtxcs/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("chxfImg", yqktService.findMyzhImgInfo());
+        view.addObject("chtxcs", chxfService.findChtxcsInfo());
+        return view;
+    }
+
+    /**
+     * 产后修复-舒缓调理跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "chxf/shtl")
+    public ModelAndView shtl(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/chxf/shtl/index.vm", null);
+        view.addObject("head_path", "public/chxf/shtl/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("chxfImg", yqktService.findMyzhImgInfo());
+        view.addObject("shtl", chxfService.findShtlInfo());
+        return view;
+    }
+
+    /**
+     * 产后修复-女性私密护养跳转
+     *
+     * @return
+     */
+    @RequestMapping(value = "chxf/nxsmhy")
+    public ModelAndView nxsmhy(HttpServletRequest request) {
+        ModelAndView view = createLayoutView("public/chxf/nxsmhy/index.vm", null);
+        view.addObject("head_path", "public/chxf/nxsmhy/head.vm");
+        view.addObject("home", homeService.findHomeInfo());
+        view.addObject("chxfImg", yqktService.findMyzhImgInfo());
+        view.addObject("list", chxfService.findNxsmhyInfo());
         return view;
     }
     

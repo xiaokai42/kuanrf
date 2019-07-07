@@ -1,0 +1,62 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="chtxcsId" value="$!{chtxcs.id}"/>
+        <header>
+            <span>产后体形重塑编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>标题描述</font></a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="mainText" datatype="*" nullmsg="请输入标题描述">$!{chtxcs.mainText}</textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>图片信息</font></a>
+        </div>
+        <table>
+            <tbody>
+            	<!-- chtxcs img 1 -->
+                <tr>
+                	<td width="340"><img src="${request.contextPath}/home/showPhoto?id=$!{chtxcs.chtxcsImg1}&type=52" 
+                		width="300" height="123" id="myzhImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="chtxcsImg1" id="myzhImg1-input" value="$!{chtxcs.chtxcsImg1}" />
+                    	<input type="file" id="myzhImg1" data-type="52" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{chtxcs.chtxcsTitle1}" placeholder="标题"  name="chtxcsTitle1"/>
+                	</td>
+                </tr>
+                <tr>
+	                <td colspan="4">
+	                    <textarea name="chtxcsText1">$!{chtxcs.chtxcsText1}</textarea>
+	                </td>
+	            </tr>
+	            <!-- chtxcs img 2 -->
+                <tr>
+                	<td width="340"><img src="${request.contextPath}/home/showPhoto?id=$!{chtxcs.chtxcsImg2}&type=52" 
+                		width="300" height="123" id="myzhImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="chtxcsImg2" id="myzhImg2-input" value="$!{chtxcs.chtxcsImg2}" />
+                    	<input type="file" id="myzhImg2" data-type="52" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+	                	<input type="text" class="input-form big-input" value="$!{chtxcs.chtxcsTitle2}" placeholder="标题"  name="chtxcsTitle2"/>
+                	</td>
+                </tr>
+                <tr>
+	                <td colspan="4">
+	                    <textarea name="chtxcsText2">$!{chtxcs.chtxcsText2}</textarea>
+	                </td>
+	            </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

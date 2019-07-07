@@ -19,32 +19,32 @@
 				<a class="nav-child has-child" href="#">
 					门店信息
 					<div class="menu-child">
-						<span data-uri="store-jfb.html">解放碑店</span>
-						<span data-uri="store-spb.html">沙坪坝店</span>
+						<span data-uri="/public/store/jfb">解放碑店</span>
+						<span data-uri="/public/store/spb">沙坪坝店</span>
 					</div>
 				</a>
 				<a class="nav-child has-child" href="#">
 					母婴照护
 					<div class="menu-child">
-						<span data-uri="myzh-1.html">孕期课堂</span>
-						<span data-uri="myzh-2.html">月子期护理</span>
-						<span data-uri="myzh-3.html">产褥期形体指导</span>
-						<span data-uri="myzh-4.html">营养膳食</span>
-						<span data-uri="myzh-5.html">宝宝护理</span>
+						<span data-uri="/public/myzh/yqkt">孕期课堂</span>
+						<span data-uri="/public/myzh/yzqhl">月子期护理</span>
+						<span data-uri="/public/myzh/crqxtzd">产褥期形体指导</span>
+						<span data-uri="/public/myzh/yyss">营养膳食</span>
+						<span data-uri="/public/myzh/bbhl">宝宝护理</span>
 					</div>
 				</a>
 				<a class="nav-child has-child" href="#">
 					产后修复
 					<div class="menu-child">
-						<span data-uri="chxf-1.html">产后体质调理</span>
-						<span data-uri="chxf-2.html">产后形体重塑</span>
-						<span data-uri="chxf-3.html">女性私密维养</span>
-						<span data-uri="chxf-4.html">舒缓调理</span>
+						<span data-uri="/public/chxf/chtztl">产后体质调理</span>
+						<span data-uri="/public/chxf/chtxcs">产后形体重塑</span>
+						<span data-uri="/public/chxf/nxsmhy">女性私密维养</span>
+						<span data-uri="/public/chxf/shtl">舒缓调理</span>
 					</div>
 				</a>
-				<a class="nav-child" href="child/active.html">精彩活动</a>
+				<a class="nav-child" href="${request.contextPath}/public/active">精彩活动</a>
 				<a class="nav-child" href="${request.contextPath}/public/about">联系我们</a>
-				<a class="nav-child" href="child/recruit.html">人才招聘</a>
+				<a class="nav-child" href="${request.contextPath}/public/recruit">人才招聘</a>
 			</div>
 		</div>
 		<div class="nav-secound"></div>

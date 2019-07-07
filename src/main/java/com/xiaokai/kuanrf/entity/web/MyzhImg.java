@@ -40,6 +40,12 @@ public class MyzhImg extends BaseEntity
      */
     @Column(name = "myzh_text", columnDefinition = "text")
     private String myzhText;
+
+    /**
+     * 女性私密护养-文本内容
+     */
+    @Column(name = "nxsmhy_text", columnDefinition = "text")
+    private String nxsmhyText;
     
     public String getBannerImg()
     {
@@ -79,6 +85,16 @@ public class MyzhImg extends BaseEntity
     public void setMyzhText(String myzhText)
     {
         this.myzhText = myzhText;
+    }
+
+    public String getNxsmhyText()
+    {
+        return nxsmhyText;
+    }
+
+    public void setNxsmhyText(String nxsmhyText)
+    {
+        this.nxsmhyText = nxsmhyText;
     }
 
 }

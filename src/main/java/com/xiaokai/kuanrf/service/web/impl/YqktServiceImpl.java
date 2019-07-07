@@ -138,7 +138,10 @@ public class YqktServiceImpl implements YqktService
                         myzhImg.setBannerImg2(activeImg.getBannerImg2());
                     }
                     if (StringUtils.isNotEmpty(activeImg.getMyzhText())) {
-                        myzhImg.setBannerImg2(activeImg.getMyzhText());
+                        myzhImg.setMyzhText(activeImg.getMyzhText());
+                    }
+                    if (StringUtils.isNotEmpty(activeImg.getNxsmhyText())) {
+                        myzhImg.setNxsmhyText(activeImg.getNxsmhyText());
                     }
                     generalDao.update(myzhImg);
                     result = 1;

@@ -52,46 +52,25 @@
 	<!-- 首页大图 -->
 	<section class="main-img">
 		<div class="main-img-wrapper">
-			<img src="${request.contextPath}/public/showPhoto?id=$!{yqktImg.bannerImg1}&type=80" width="1920" height="600" />
+			<img src="${request.contextPath}/public/showPhoto?id=$!{chxfImg.bannerImg2}&type=50" width="1920" height="600" />
 		</div>
 	</section>
-	<!-- 人才招聘 -->
-	<section class="recruit">
-		<div class="recruit-content">
-			<div class="recruit-content-title">人 才 招 聘</div>
-			#foreach($item in $list)
-				<div class="recruit-box">
-					<div class="rb-left">
-						<img src="${request.contextPath}/public/showPhoto?id=$!{item.recruitIcon}&type=81" width="114" height="155" />
-					</div>
-					<div class="rb-right">
-						<h1>【招聘岗位】</h1>
-						<p class="job">$!{item.work}（$!{item.money}）</p>
-						<span>岗位要求：</span>
-						<div class="rb-text">
-							#if($item.duty.indexOf("-")!=-1)
-								#foreach($ele in $item.duty.split("-"))
-									<p>$!{ele}</p>
-								#end
-							#else
-								<p>$!{item.duty}</p>
-							#end
-						</div>
-						<span>公司福利：</span>
-						#if($item.duty.indexOf("-")!=-1)
-								#foreach($ele in $item.welfare.split("-"))
-									<p>$!{ele}</p>
-								#end
-							#else
-								<p>$!{item.welfare}</p>
-							#end
-					</div>
-					<div class="rb-bottom">
-						<span><img src="${request.contextPath}/resources/images/child/recruit-ico1.png" width="15" height="20" />联系人：$!{item.person}</span>
-						<span><img src="${request.contextPath}/resources/images/child/recruit-ico2.png" width="20" height="20" />$!{item.phone}</span>
-					</div>
+	<section class="chxf">
+		<div class="chxf-content">
+			<div class="chxf-content-title">产 后 体 型 重 塑</div>
+			<p>$!{chtxcs.mainText}</p>
+			<div class="chxf-content-main">
+				<div class="ccm-box">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{chtxcs.chtxcsImg1}&type=52" width="555" height="228" />
+					<h1>· $!{chtxcs.chtxcsTitle1} ·</h1>
+					<p>$!{chtxcs.chtxcsText1}</p>
 				</div>
-			#end
+				<div class="ccm-box">
+					<img src="${request.contextPath}/public/showPhoto?id=$!{chtxcs.chtxcsImg2}&type=52" width="555" height="228" />
+					<h1>· $!{chtxcs.chtxcsTitle2} ·</h1>
+					<p>$!{chtxcs.chtxcsText2}</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<footer>

@@ -1,0 +1,79 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="shtlId" value="$!{shtl.id}"/>
+        <header>
+            <span>舒缓调理编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>标题描述</font></a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="mainText" datatype="*" nullmsg="请输入标题描述">$!{shtl.mainText}</textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>图片信息</font></a>
+        </div>
+        <table>
+            <tbody>
+            	<!-- shtl img 1 -->
+                <tr>
+                	<td width="155"><img src="${request.contextPath}/home/showPhoto?id=$!{shtl.shtlImg1}&type=54" 
+                		width="115" height="120" id="myzhImg1-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="shtlImg1" id="myzhImg1-input" value="$!{shtl.shtlImg1}" />
+                    	<input type="file" id="myzhImg1" data-type="54" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+                		<input type="text" class="input-form big-input" value="$!{shtl.shtlTitle1}" placeholder="标题"  name="shtlTitle1"/>
+                	</td>
+                </tr>
+                <tr>
+	                <td colspan="4">
+	                    <textarea name="shtlText1">$!{shtl.shtlText1}</textarea>
+	                </td>
+	            </tr>
+	            <!-- shtl img 2 -->
+                <tr>
+                	<td width="155"><img src="${request.contextPath}/home/showPhoto?id=$!{shtl.shtlImg2}&type=54" 
+                		width="115" height="120" id="myzhImg2-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="shtlImg2" id="myzhImg2-input" value="$!{shtl.shtlImg2}" />
+                    	<input type="file" id="myzhImg2" data-type="54" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+	                	<input type="text" class="input-form big-input" value="$!{shtl.shtlTitle2}" placeholder="标题"  name="shtlTitle2"/>
+                	</td>
+                </tr>
+                <tr>
+	                <td colspan="4">
+	                    <textarea name="shtlText2">$!{shtl.shtlText2}</textarea>
+	                </td>
+	            </tr>
+	            <!-- shtl img 3 -->
+                <tr>
+                	<td width="155"><img src="${request.contextPath}/home/showPhoto?id=$!{shtl.shtlImg3}&type=54" 
+                		width="115" height="120" id="myzhImg3-img"/></td>
+                	<td width="200">
+                		<input type="hidden" name="shtlImg3" id="myzhImg3-input" value="$!{shtl.shtlImg3}" />
+                    	<input type="file" id="myzhImg3" data-type="54" class="uploadImg" name="file" accept="image/*"/>
+                	</td>
+                	<td>
+	                	<input type="text" class="input-form big-input" value="$!{shtl.shtlTitle3}" placeholder="标题"  name="shtlTitle3"/>
+                	</td>
+                </tr>
+                <tr>
+	                <td colspan="4">
+	                    <textarea name="shtlText3">$!{shtl.shtlText3}</textarea>
+	                </td>
+	            </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

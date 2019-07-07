@@ -1,0 +1,28 @@
+<div class="page-list">
+    <div class="btn-bar">
+        <button type="button" class="btn-primary" id="add-btn">新增</button>
+        <button type="button" class="btn-primary" id="edit-btn">修改</button>
+        <button type="button" class="btn-primary" id="img-btn">标题描述</button>
+    </div>
+    <div class="search-bar">
+        <table>
+            <tr>
+                <td>项目名称</td>
+                <td><input type="text" class="input-form" name="title"/></td>
+                <td>发布状态</td>
+                <td>
+                    <select name="status" onchange="searchData()">
+                        <option value="">全部</option>
+                        <option value="1">已发布</option>
+                        <option value="0">未发布</option>
+                    </select>
+                </td>
+                <td rowspan="2">
+                    <button type="button" class="btn-primary searchBtn">查询</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="tableDiv" class="dt-grid-container table-div"></div>
+    <div id="pagingDiv" class="dt-grid-toolbar-container"></div>
+</div>
