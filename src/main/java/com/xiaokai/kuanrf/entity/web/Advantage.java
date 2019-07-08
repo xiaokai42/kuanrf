@@ -28,6 +28,12 @@ public class Advantage extends BaseEntity
      */
     @Column(name = "about_text", length = 500)
     private String aboutText;
+    
+    /**
+     * 视频
+     */
+    @Column(name = "video", length = 50)
+    private String video;
 
     public String getBannerImg()
     {
@@ -47,6 +53,16 @@ public class Advantage extends BaseEntity
     public void setAboutText(String aboutText)
     {
         this.aboutText = aboutText;
+    }
+
+    public String getVideo()
+    {
+        return video;
+    }
+
+    public void setVideo(String video)
+    {
+        this.video = video;
     }
 
 }

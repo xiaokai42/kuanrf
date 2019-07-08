@@ -45,6 +45,11 @@ public class FileUtil
     public static final String ROOT_SIGN = ROOT + File.separator + "web";
 
     /**
+     * 视频根目录
+     */
+    public static final String ROOT_VEDIO = ROOT + File.separator + "vedio";
+
+    /**
      * 文件根目录
      */
     public static final String ROOT_POLICY = ROOT + File.separator + "policy";
@@ -282,7 +287,7 @@ public class FileUtil
     }
 
     /**
-     * 常用文件的文件头如下：(以前六位为准) JPEG (jpg)，文件头：FFD8FF; PNG (png)，文件头：89504E47; GIF (gif)，文件头：47494638; TIFF (tif)，文件头：49492A00; Windows Bitmap
+     * 常用文件的文件头如下：(以前六位为准) JPEG (jpg)，文件头：FFD8FFE0; PNG (png)，文件头：89504E47; GIF (gif)，文件头：47494638; TIFF (tif)，文件头：49492A00; Windows Bitmap
      * (bmp)，文件头：424D; CAD (dwg)，文件头：41433130; Adobe Photoshop (psd)，文件头：38425053; Rich Text Format (rtf)，文件头：7B5C727466; XML (xml)，文件头：3C3F786D6C;
      * HTML (html)，文件头：68746D6C3E; Email [thorough only] (eml)，文件头：44656C69766572792D646174653A; Outlook Express (dbx)，文件头：CFAD12FEC5FD746F; Outlook
      * (pst)，文件头：2142444E; MS Word/Excel (xls.or.doc)，文件头：D0CF11E0; MS Access (mdb)，文件头：5374616E64617264204A; WordPerfect (wpd)，文件头：FF575043;
@@ -296,9 +301,21 @@ public class FileUtil
         if (CollectionUtils.isEmpty(fileType))
         {
             fileType = new HashMap<String, String>();
-            fileType.put("FFD8FF", "jpg");
-            fileType.put("89504E", "png");
-            fileType.put("474946", "gif");
+            fileType.put("FFD8FFE0", "jpg");
+            fileType.put("89504E47", "png");
+            fileType.put("47494638", "gif");
+        }
+        return fileType.get(type);
+    }
+    
+    public static String checkVedioType(String type)
+    {
+        if (CollectionUtils.isEmpty(fileType))
+        {
+            fileType = new HashMap<String, String>();
+            fileType.put("41564920", "avi");
+            fileType.put("2E524D46", "rmvb");
+            fileType.put("00000020", "mp4");
         }
         return fileType.get(type);
     }
@@ -316,7 +333,7 @@ public class FileUtil
         {
             return null;
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             int v = src[i] & 0xFF;
             String hv = Integer.toHexString(v);
@@ -358,6 +375,34 @@ public class FileUtil
     }
 
     /**
+     * 判断上传的视频是否是mp4/avi/rmvb
+     * 
+     * @param file
+     * @return
+     */
+    public static boolean isVideo(MultipartFile file)
+    {
+        boolean b = false;
+        try
+        {
+            if (null != file)
+            {
+                String name = file.getOriginalFilename();
+                String suffix = name.substring(name.lastIndexOf("."));
+                String fileType = bytesToHexString(file.getBytes());
+                String type = checkVedioType(fileType);
+                b = ("mp4".equals(type) && suffix.toUpperCase().equals(".MP4"))
+                        || ("rmvb".equals(type) && suffix.toUpperCase().equals(".RMVB"))
+                        || ("avi".equals(type) && suffix.toUpperCase().equals(".AVI"));
+            }
+        } catch (Exception e)
+        {
+            LOG.error("视频判断异常", e);
+        }
+        return b;
+    }
+
+    /**
      * 检查上传的照片是否合格并上传文件，jpg/png/gif，小于2mb
      * 
      * @param file
@@ -387,6 +432,40 @@ public class FileUtil
         } catch (Exception e)
         {
             LOG.error("照片判断异常", e);
+        }
+        return null;
+    }
+
+    /**
+     * 检查上传的照片是否合格并上传文件，avi/mp4/rmvb，小于10mb
+     * 
+     * @param file
+     * @return
+     */
+    @SuppressWarnings("unused")
+    public static Attachment checkVideo(MultipartFile file, String rootPath, int type)
+    {
+        try
+        {
+            if ((null != file) && isVideo(file))
+            {
+                Attachment atta = changeFile(file, rootPath, type);
+                if (atta.getFileSize() <= (10 * 1024 * 1024))
+                {
+                    uploadFile(file, atta);
+                    String path = findPath(atta);
+                    File f = new File(path);
+                    if (null != f)
+                    {
+                        return atta;
+                    }
+                    deleteFile(path);
+                }
+
+            }
+        } catch (Exception e)
+        {
+            LOG.error("视频判断异常", e);
         }
         return null;
     }

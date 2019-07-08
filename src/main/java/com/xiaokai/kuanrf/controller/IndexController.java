@@ -28,7 +28,7 @@ public class IndexController extends BaseController
     @RequestMapping("")
     public ModelAndView entry(HttpServletRequest request)
     {
-        return new ModelAndView("redirect:/login");
+        return new ModelAndView("redirect:/public");
     }
 
     /**

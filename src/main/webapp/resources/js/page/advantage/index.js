@@ -45,6 +45,13 @@ $(function(){
 		}
 	});
 	
+	//上传视频
+	$("#main").on("change", ".uploadVideo", function() {
+		if($(this).val() != "") {
+			uploadVedio($(this).attr("data-type"), $(this).attr("id"));
+		}
+	});
+	
 	// 序列化表单对象
 	$.fn.serializeObject = function() {
 		var o = {};

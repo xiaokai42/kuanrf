@@ -35,5 +35,21 @@
                 </tr>
             </tbody>
         </table>
+        <div class="person">
+            <a class="person-title"><font>视频信息</font></a>
+        </div>
+        <table>
+            <tr>
+            	<!-- banner img 1 -->
+                <td width="440">
+                	<video src="${request.contextPath}/home/showPhoto?id=$!{advantage.video}" id="aboutVideo-video"
+                		width="400" height="240" controls="controls">您的浏览器不支持 video 标签。</video>
+                </td>
+                <td>
+                    <input type="hidden" name="video" id="aboutVideo-input" value="$!{advantage.video}" />
+                    <input type="file" id="aboutVideo" data-type="100" class="uploadVideo" name="file" accept="video/*" />
+                </td>
+            </tr>
+        </table>
     </form>
 </section>

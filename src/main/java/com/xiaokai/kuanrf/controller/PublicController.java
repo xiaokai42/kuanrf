@@ -435,6 +435,39 @@ public class PublicController extends BaseController{
         }
         return result;
     }
+    
+    /**
+     * 上传视频
+     *
+     * @param file    文件对象
+     * @param request
+     */
+    @RequestMapping(value = "upload/video", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> uploadVedio(HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("flag", false);
+        try {
+            MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+            List<MultipartFile> files = multipartRequest.getFiles("file");
+            if ((null != files) && (files.size() == 1)) {
+                Attachment atta = FileUtil.checkVideo(files.get(0), FileUtil.ROOT_VEDIO, Integer.valueOf(request.getParameter("type")));
+                if (null != atta) {
+                    attaService.saveAtta(atta);
+                    result.put("flag", true);
+                    result.put("id", atta.getId());
+                } else {
+                    result.put("msg", "上传视频不合格，格式mp4/avi/rmvb，小于10mb");
+                }
+            } else {
+                result.put("msg", "上传视频为空或多个");
+            }
+        } catch (Exception e) {
+            LOG.error("视频上传异常", e);
+            result.put("msg", "视频上传异常");
+        }
+        return result;
+    }
 
     /**
      * 显示报名照片

@@ -13,6 +13,10 @@ ul li {
 	list-style: none;
 }
 
+video {
+	outline: none;
+}
+
 a:link, a:active, a:visited {
 	text-decoration: none;
 }
