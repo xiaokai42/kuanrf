@@ -1,5 +1,5 @@
 <section class="box">
-	<div class="box-left">重庆市设计下乡服务平台</div>
+	<div class="box-left">宽仁妇孺照护中心网站后台</div>
 	<div class="box-right">
 		<form action="${request.contextPath}/login" method="post" id="loginForm">
 		<table>

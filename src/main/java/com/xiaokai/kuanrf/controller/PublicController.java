@@ -93,6 +93,7 @@ public class PublicController extends BaseController{
         ModelAndView view = createLayoutView("public/index.vm", null);
         view.addObject("head_path", "public/head.vm");
         view.addObject("home", homeService.findHomeInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -107,6 +108,7 @@ public class PublicController extends BaseController{
         view.addObject("head_path", "public/advantage/head.vm");
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("advantage", advantageService.findAdvantageInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -121,6 +123,7 @@ public class PublicController extends BaseController{
         view.addObject("head_path", "public/about/head.vm");
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("about", aboutService.findAboutInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -135,6 +138,7 @@ public class PublicController extends BaseController{
         view.addObject("head_path", "public/store/head.vm");
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("store", storeService.findStoreInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -149,6 +153,7 @@ public class PublicController extends BaseController{
         view.addObject("head_path", "public/store/head1.vm");
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("store", storeService.findStoreInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -164,6 +169,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("map", activeService.findActiveInfo());
         view.addObject("activeImg", activeService.findActiveImgInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -179,6 +185,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("activeImg", activeService.findActiveImgInfo());
         view.addObject("type", request.getParameter("type"));
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -209,6 +216,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("activeImg", activeService.findActiveImgInfo());
         view.addObject("active", activeService.findbyId(request.getParameter("id")));
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -223,6 +231,7 @@ public class PublicController extends BaseController{
         view.addObject("head_path", "public/myzh/yqkt/head.vm");
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -251,6 +260,7 @@ public class PublicController extends BaseController{
         ModelAndView view = createLayoutView("public/myzh/yqkt/detail.vm", "common/main");
         view.addObject("head_path", "public/myzh/yqkt/detailHead.vm");
         view.addObject("yqkt", yqktService.findbyId(request.getParameter("id")));
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -266,6 +276,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("yzqhl", myzhService.findYzqhlInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -281,6 +292,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("crqxtzd", myzhService.findCrqxtzdInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -296,6 +308,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("yyss", myzhService.findYyssInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -311,6 +324,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("bbhl", myzhService.findBbhlInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -326,6 +340,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("yqktImg", yqktService.findMyzhImgInfo());
         view.addObject("list", recruitService.findRecruitInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -341,6 +356,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("chxfImg", yqktService.findMyzhImgInfo());
         view.addObject("chtztl", chxfService.findChtztlInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -356,6 +372,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("chxfImg", yqktService.findMyzhImgInfo());
         view.addObject("chtxcs", chxfService.findChtxcsInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -371,6 +388,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("chxfImg", yqktService.findMyzhImgInfo());
         view.addObject("shtl", chxfService.findShtlInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -386,6 +404,7 @@ public class PublicController extends BaseController{
         view.addObject("home", homeService.findHomeInfo());
         view.addObject("chxfImg", yqktService.findMyzhImgInfo());
         view.addObject("list", chxfService.findNxsmhyInfo());
+        view.addObject("preference", homeService.findPreferenceInfo());
         return view;
     }
 
@@ -424,7 +443,7 @@ public class PublicController extends BaseController{
                     result.put("flag", true);
                     result.put("id", atta.getId());
                 } else {
-                    result.put("msg", "上传图片不合格，图片格式为jpg，小于2mb");
+                    result.put("msg", "上传图片不合格，图片格式为jpg/png/gif，小于2mb");
                 }
             } else {
                 result.put("msg", "上传图片为空或多个");

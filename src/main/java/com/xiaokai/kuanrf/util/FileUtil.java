@@ -287,7 +287,7 @@ public class FileUtil
     }
 
     /**
-     * 常用文件的文件头如下：(以前六位为准) JPEG (jpg)，文件头：FFD8FFE0; PNG (png)，文件头：89504E47; GIF (gif)，文件头：47494638; TIFF (tif)，文件头：49492A00; Windows Bitmap
+     * 常用文件的文件头如下：(以前六位为准) JPEG (jpg)，文件头：FFD8FFE1; PNG (png)，文件头：89504E47; GIF (gif)，文件头：47494638; TIFF (tif)，文件头：49492A00; Windows Bitmap
      * (bmp)，文件头：424D; CAD (dwg)，文件头：41433130; Adobe Photoshop (psd)，文件头：38425053; Rich Text Format (rtf)，文件头：7B5C727466; XML (xml)，文件头：3C3F786D6C;
      * HTML (html)，文件头：68746D6C3E; Email [thorough only] (eml)，文件头：44656C69766572792D646174653A; Outlook Express (dbx)，文件头：CFAD12FEC5FD746F; Outlook
      * (pst)，文件头：2142444E; MS Word/Excel (xls.or.doc)，文件头：D0CF11E0; MS Access (mdb)，文件头：5374616E64617264204A; WordPerfect (wpd)，文件头：FF575043;
@@ -298,25 +298,19 @@ public class FileUtil
      */
     public static String checkType(String type)
     {
-        if (CollectionUtils.isEmpty(fileType))
-        {
-            fileType = new HashMap<String, String>();
-            fileType.put("FFD8FFE0", "jpg");
-            fileType.put("89504E47", "png");
-            fileType.put("47494638", "gif");
-        }
+        fileType = new HashMap<String, String>();
+        fileType.put("FFD8FFE1", "jpg");
+        fileType.put("89504E47", "png");
+        fileType.put("47494638", "gif");
         return fileType.get(type);
     }
     
     public static String checkVedioType(String type)
     {
-        if (CollectionUtils.isEmpty(fileType))
-        {
-            fileType = new HashMap<String, String>();
-            fileType.put("41564920", "avi");
-            fileType.put("2E524D46", "rmvb");
-            fileType.put("00000020", "mp4");
-        }
+        fileType = new HashMap<String, String>();
+        fileType.put("41564920", "avi");
+        fileType.put("2E524D46", "rmvb");
+        fileType.put("00000020", "mp4");
         return fileType.get(type);
     }
 

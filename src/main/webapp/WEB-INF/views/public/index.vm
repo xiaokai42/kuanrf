@@ -127,10 +127,10 @@
 	<section class="store">
 		<div class="store-content">
 			<div class="store-grid">
-				<a class="store-jfb" href="child/store-jfb.html" title="解放碑店">
+				<a class="store-jfb" href="${request.contextPath}/public/store/jfb" title="解放碑店">
 					<img src="${request.contextPath}/public/showPhoto?id=$!{home.storeImg1}&type=12" width="1200" height="314" />
 				</a>
-				<a class="store-spb" href="child/store-spb.html" title="沙坪坝店">
+				<a class="store-spb" href="${request.contextPath}/public/store/spb" title="沙坪坝店">
 					<img src="${request.contextPath}/public/showPhoto?id=$!{home.storeImg2}&type=12" width="1200" height="314" />
 				</a>
 			</div>
@@ -190,7 +190,7 @@
 				<span>$!{home.moreText2}</span>
 				<div class="detail"></div>
 			</a>
-			<a href="#" class="mc-box">
+			<a href="${request.contextPath}/public/advantage" class="mc-box">
 				<img src="${request.contextPath}/public/showPhoto?id=$!{home.moreImg3}&type=14" width="387" height="288" />
 				<span>$!{home.moreText3}</span>
 				<div class="detail"></div>

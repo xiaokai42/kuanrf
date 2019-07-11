@@ -116,20 +116,22 @@
 		</property>
 	</bean>
 
-	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- 静态资源访问 -->
+	<mvc:default-servlet-handler/>
+  	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<!-- 菜单拦截器 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/manage/**" />
-			<mvc:mapping path="/main/**" />
-			<mvc:mapping path="/signup/**" />
-			<mvc:mapping path="/process/**" />
-			<mvc:mapping path="/footmark/**" />
-			<mvc:mapping path="/fruit/**" />
-			<mvc:mapping path="/cases/**" />
-			<mvc:mapping path="/project/**" />
-			<mvc:mapping path="/compose/**" />
+			<mvc:mapping path="/about/**" />
+			<mvc:mapping path="/active/**" />
+			<mvc:mapping path="/advantage/**" />
+			<mvc:mapping path="/chxf/**" />
+			<mvc:mapping path="/home/**" />
+			<mvc:mapping path="/myzh/**" />
+			<mvc:mapping path="/recruit/**" />
+			<mvc:mapping path="/store/**" />
 			<bean class="com.xiaokai.kuanrf.interceptor.LoginInterceptor">
 				
 			</bean>
