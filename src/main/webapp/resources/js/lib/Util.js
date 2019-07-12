@@ -32,11 +32,9 @@ var Util = function() {
 			var pos = curWwwPath.indexOf(pathName);
 			var localhostPaht = curWwwPath.substring(0, pos);
 			var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
-			console.log(localhostPaht);
 			if (projectName != "/kuanrf") {
 				return localhostPaht;
 			} else {
-				console.log("-"+localhostPaht);
 				return (localhostPaht + projectName);
 			}
 		},

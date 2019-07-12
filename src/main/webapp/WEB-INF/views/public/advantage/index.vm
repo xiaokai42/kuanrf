@@ -101,7 +101,7 @@
 	<section class="video">
 		<div class="video-content">
 			<div class="video-box">
-				<video src="${request.contextPath}/home/showPhoto?id=$!{advantage.video}" id="aboutVideo-video"
+				<video src="${request.contextPath}/public/showPhoto?id=$!{advantage.video}" id="aboutVideo-video"
 	                width="800" height="460" controls="controls">您的浏览器不支持 video 标签。</video>
 			</div>
 		</div>

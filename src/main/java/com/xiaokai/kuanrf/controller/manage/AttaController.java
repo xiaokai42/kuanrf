@@ -66,6 +66,7 @@ public class AttaController extends BaseController
             } else if (user == null)
             {
                 obj.put("state", "上传文件失败");
+                LOG.error("ueditor配置加载失败");
             } else
             {
                 MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
