@@ -124,6 +124,9 @@
 				</tr>
 			</table>
 			<img src="${request.contextPath}/public/showPhoto?id=$!{home.twoBarCodes}&type=15" width="145" height="145" />
+			<a class="police" href="http://www.beianbeian.com/beianxinxi/0ea0e56b068c60e14a1632e81a60ce57.html" target="_blank">渝ICP备15001537号-2</a>
+			<a class="police police1" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010702500334" target="_blank">
+				<img src="${request.contextPath}/resources/images/icon-police.png" />渝公网安备50010702500334号</a>
 		</div>
 	</footer>
 </section>

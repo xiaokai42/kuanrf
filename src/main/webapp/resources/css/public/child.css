@@ -1317,3 +1317,44 @@ footer .footer-content1 table tr td {
 footer .footer-content1 table tr td.bold {
 	font-weight: bold;
 }
+
+footer .footer-content a.police {
+	left: 400px;
+	bottom: 80px;
+	color: #727271;
+	position: absolute;	
+}
+
+footer .footer-content a.police img {
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+
+footer .footer-content a.police1 {
+	left: 380px;
+	bottom: 40px;
+}
+
+footer .footer-content1 a.police {
+	left: 0;
+	bottom: 40px;
+	color: #727271;
+	position: absolute;	
+}
+
+footer .footer-content1 a.police img {
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+
+footer .footer-content1 a.police1 {
+	left: 500px;
+}
+
+
+
+
+
+
+
+
