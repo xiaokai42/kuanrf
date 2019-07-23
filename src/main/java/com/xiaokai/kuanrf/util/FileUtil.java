@@ -299,9 +299,9 @@ public class FileUtil
     public static String checkType(String type)
     {
         fileType = new HashMap<String, String>();
-        fileType.put("FFD8FFE1", "jpg");
-        fileType.put("89504E47", "png");
-        fileType.put("47494638", "gif");
+        fileType.put("FFD8FF", "jpg");
+        fileType.put("89504E", "png");
+        fileType.put("474946", "gif");
         return fileType.get(type);
     }
     
@@ -321,6 +321,32 @@ public class FileUtil
      * @return
      */
     public static String bytesToHexString(byte[] src)
+    {
+        StringBuilder builder = new StringBuilder();
+        if (src == null || src.length <= 0)
+        {
+            return null;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2)
+            {
+                builder.append(0);
+            }
+            builder.append(hv);
+        }
+        return builder.toString().toUpperCase();
+    }
+
+    /**
+     * 头文件
+     * 
+     * @param src
+     * @return
+     */
+    public static String bytesToHexString1(byte[] src)
     {
         StringBuilder builder = new StringBuilder();
         if (src == null || src.length <= 0)
@@ -383,7 +409,7 @@ public class FileUtil
             {
                 String name = file.getOriginalFilename();
                 String suffix = name.substring(name.lastIndexOf("."));
-                String fileType = bytesToHexString(file.getBytes());
+                String fileType = bytesToHexString1(file.getBytes());
                 String type = checkVedioType(fileType);
                 b = ("mp4".equals(type) && suffix.toUpperCase().equals(".MP4"))
                         || ("rmvb".equals(type) && suffix.toUpperCase().equals(".RMVB"))
