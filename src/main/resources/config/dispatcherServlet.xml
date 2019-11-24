@@ -109,7 +109,7 @@
 			<value>104857600</value>
 		</property>
 		<property name="maxInMemorySize">
-			<value>4096</value>
+			<value>2097152</value>
 		</property>
 		<property name="uploadTempDir">
 			<value>fileUpload</value>

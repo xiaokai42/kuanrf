@@ -1,10 +1,12 @@
 package com.xiaokai.kuanrf.controller;
 
+import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -437,11 +439,20 @@ public class PublicController extends BaseController{
             MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
             List<MultipartFile> files = multipartRequest.getFiles("file");
             if ((null != files) && (files.size() == 1)) {
-                Attachment atta = FileUtil.checkImg(files.get(0), FileUtil.ROOT_SIGN, Integer.valueOf(request.getParameter("type")));
+                MultipartFile multipartFile = files.get(0);
+                Attachment atta = FileUtil.checkImg(multipartFile, FileUtil.ROOT_SIGN, Integer.valueOf(request.getParameter("type")));
                 if (null != atta) {
                     attaService.saveAtta(atta);
                     result.put("flag", true);
                     result.put("id", atta.getId());
+                    // 获取上传文件宽高
+                    BufferedImage img = ImageIO.read(multipartFile.getInputStream());
+                    if (img != null) {
+                        result.put("width", img.getWidth());
+                        result.put("height", img.getHeight());
+                    } else {
+                        result.put("msg", "图片上传错误");
+                    }
                 } else {
                     result.put("msg", "上传图片不合格，图片格式为jpg/png/gif，小于2mb");
                 }

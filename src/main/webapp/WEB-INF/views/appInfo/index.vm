@@ -1,0 +1,154 @@
+<section id="main">
+    <form id="bean-form">
+        <input type="hidden" name="id" id="appInfoId" value="$!{appInfo.id}"/>
+        <header>
+            <span>移动端信息编辑</span>
+            <div class="btn-bar">
+                <button id="formSubmit" type="button" class="btn-primary">保存信息</button>
+            </div>
+        </header>
+        <div class="person">
+            <a class="person-title"><font>首页信息</font></a>
+        </div>
+        <table>
+        	<tr>
+        		<td colspan="2" align="center"><span class="app-title">banner大图</span></td>
+        		<td colspan="2" align="center"><span class="app-title">品牌介绍</span></td>
+        	</tr>
+            <tr>
+            	<!-- banner img -->
+                <td width="190">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.bannerImg}&type=80" width="150" height="92" id="appInfoImg-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="bannerImg" id="appInfoImg-input" value="$!{appInfo.bannerImg}" />
+                    <input type="file" id="appInfoImg" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+                <!-- home img 1 -->
+                <td width="190">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.homeImg1}&type=80" width="150" height="110" id="appInfoImg1-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="homeImg1" id="appInfoImg1-input" value="$!{appInfo.homeImg1}" />
+                    <input type="hidden" name="homeImg1Width" id="appInfoImg1-width" value="$!{appInfo.homeImg1Width}" />
+                    <input type="hidden" name="homeImg1Height" id="appInfoImg1-height" value="$!{appInfo.homeImg1Height}" />
+                    <input type="file" id="appInfoImg1" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+            </tr>
+        	<tr>
+        		<td colspan="2" align="center"><span class="app-title">母婴照护</span></td>
+        		<td colspan="2" align="center"><span class="app-title">产后修复</span></td>
+        	</tr>
+        	<tr>
+        		<!-- home img 2 -->
+                <td width="190">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.homeImg2}&type=80" width="150" height="110" id="appInfoImg2-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="homeImg2" id="appInfoImg2-input" value="$!{appInfo.homeImg2}" />
+                    <input type="hidden" name="homeImg2Width" id="appInfoImg2-width" value="$!{appInfo.homeImg2Width}" />
+                    <input type="hidden" name="homeImg2Height" id="appInfoImg2-height" value="$!{appInfo.homeImg2Height}" />
+                    <input type="file" id="appInfoImg2" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+                <!-- home img 3 -->
+                <td width="190">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.homeImg3}&type=80" width="150" height="110" id="appInfoImg3-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="homeImg3" id="appInfoImg3-input" value="$!{appInfo.homeImg3}" />
+                    <input type="hidden" name="homeImg3Width" id="appInfoImg3-width" value="$!{appInfo.homeImg3Width}" />
+                    <input type="hidden" name="homeImg3Height" id="appInfoImg3-height" value="$!{appInfo.homeImg3Height}" />
+                    <input type="file" id="appInfoImg3" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+        	</tr>
+        	<tr>
+        		<td colspan="2" align="center"><span class="app-title">人才招聘</span></td>
+        	</tr>
+        	<tr>
+        		<!-- home img 4 -->
+                <td width="190">
+                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.homeImg4}&type=80" width="150" height="26" id="appInfoImg4-img"/>
+                </td>
+                <td>
+                    <input type="hidden" name="homeImg4" id="appInfoImg4-input" value="$!{appInfo.homeImg4}" />
+                    <input type="hidden" name="homeImg4Width" id="appInfoImg4-width" value="$!{appInfo.homeImg4Width}" />
+                    <input type="hidden" name="homeImg4Height" id="appInfoImg4-height" value="$!{appInfo.homeImg4Height}" />
+                    <input type="file" id="appInfoImg4" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+                </td>
+        	</tr>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>菜单页面</font></a>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                	<td colspan="2" align="center"><span class="app-title">品牌介绍</span></td>
+        			<td colspan="2" align="center"><span class="app-title">母婴照护</span></td>
+        			<td colspan="2" align="center"><span class="app-title">产后修复</span></td>
+                </tr>
+                <tr>
+                	<!-- menu img 1 -->
+	                <td width="106">
+	                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.menuImg1}&type=80" width="66" height="250" id="menuImg1-img"/>
+	                </td>
+	                <td>
+	                    <input type="hidden" name="menuImg1" id="menuImg1-input" value="$!{appInfo.menuImg1}" />
+	                    <input type="hidden" name="menuImg1Width" id="menuImg1-width" value="$!{appInfo.menuImg1Width}" />
+	                    <input type="hidden" name="menuImg1Height" id="menuImg1-height" value="$!{appInfo.menuImg1Height}" />
+	                    <input type="file" id="menuImg1" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+	                </td>
+	                <!-- menu img 2 -->
+	                <td width="106">
+	                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.menuImg2}&type=80" width="66" height="250" id="menuImg2-img"/>
+	                </td>
+	                <td>
+	                    <input type="hidden" name="menuImg2" id="menuImg2-input" value="$!{appInfo.menuImg2}" />
+	                    <input type="hidden" name="menuImg2Width" id="menuImg2-width" value="$!{appInfo.menuImg2Width}" />
+	                    <input type="hidden" name="menuImg2Height" id="menuImg2-height" value="$!{appInfo.menuImg2Height}" />
+	                    <input type="file" id="menuImg2" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+	                </td>
+	                <!-- menu img 3 -->
+	                <td width="106">
+	                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.menuImg3}&type=80" width="66" height="250" id="menuImg3-img"/>
+	                </td>
+	                <td>
+	                    <input type="hidden" name="menuImg3" id="menuImg3-input" value="$!{appInfo.menuImg3}" />
+	                    <input type="hidden" name="menuImg3Width" id="menuImg3-width" value="$!{appInfo.menuImg3Width}" />
+	                    <input type="hidden" name="menuImg3Height" id="menuImg3-height" value="$!{appInfo.menuImg3Height}" />
+	                    <input type="file" id="menuImg3" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+	                </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="person">
+            <a class="person-title"><font>其他页面</font></a>
+        </div>
+        <table>
+            <tbody>
+	            <tr>
+	        		<td colspan="2" align="center"><span class="app-title">活动页banner大图</span></td>
+	        		<td colspan="2" align="center"><span class="app-title">招聘页banner大图</span></td>
+	        	</tr>
+	            <tr>
+	            	<!-- banner img1 -->
+	                <td width="190">
+	                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.bannerImg1}&type=80" width="150" height="92" id="bannerImg1-img"/>
+	                </td>
+	                <td>
+	                    <input type="hidden" name="bannerImg1" id="bannerImg1-input" value="$!{appInfo.bannerImg1}" />
+	                    <input type="file" id="bannerImg1" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+	                </td>
+	                <!-- banner img2 -->
+	                <td width="190">
+	                	<img src="${request.contextPath}/home/showPhoto?id=$!{appInfo.bannerImg2}&type=80" width="150" height="92" id="bannerImg2-img"/>
+	                </td>
+	                <td>
+	                    <input type="hidden" name="bannerImg2" id="bannerImg2-input" value="$!{appInfo.bannerImg2}" />
+	                    <input type="file" id="bannerImg2" data-type="80" class="uploadImg" name="file" accept="image/*"/>
+	                </td>
+	            </tr>
+            </tbody>
+        </table>
+    </form>
+</section>

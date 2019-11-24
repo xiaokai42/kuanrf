@@ -94,6 +94,11 @@ a:link, a:active, a:visited {
 	word-wrap:break-word
 }
 
+#main table tr td span.app-title {
+	font-size: 14px;
+	font-weight: bold;
+}
+
 #main .info-table .edui-editor-breadcrumb,
 #main .info-table .edui1_message_holder {
 	display: none;

@@ -24,6 +24,11 @@ function uploadSignImg(type, fileId) {
 				$("#"+fileId + "-img").attr("src", src);
 				$("#"+fileId + "-input").val(data.id);
 				$("#"+fileId).replaceWith('<input type="file" id="'+fileId+'" data-type="'+type+'" class="uploadImg" name="file" accept="image/*" />');
+				var width = $("#"+fileId + "-width"), height = $("#"+fileId + "-height");
+				if (width && height) {
+					width.val(data.width);
+					height.val(data.height);
+				}
 			} else {
 				layer.msg(data.msg, {time: 5000, icon:5});
 			}

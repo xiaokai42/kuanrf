@@ -25,6 +25,8 @@ import cn.proem.core.model.DataGridQuery;
 import cn.proem.core.model.FieldType;
 import cn.proem.core.model.Order;
 import cn.proem.core.model.OrderType;
+import cn.proem.core.model.QueryBuilder;
+import cn.proem.core.model.QueryCondition;
 import cn.proem.core.util.BeanUtils;
 import jersey.repackaged.com.google.common.collect.Lists;
 import jersey.repackaged.com.google.common.collect.Maps;
@@ -69,6 +71,14 @@ public class ActiveServiceImpl implements ActiveService
             }
         }
         return dataGrid;
+    }
+
+    @Override
+    public List<Active> findActive()
+    {
+        QueryBuilder query = new QueryBuilder();
+        query.addCondition(new QueryCondition("status", 1, ConditionType.GE, FieldType.INTEGER));
+        return generalDao.queryByCriteria(Active.class, query, new Order[] { new Order("activeDt", OrderType.DESC) }, 0, 3);
     }
 
     @Override

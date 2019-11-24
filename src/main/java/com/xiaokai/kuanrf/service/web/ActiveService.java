@@ -1,5 +1,6 @@
 package com.xiaokai.kuanrf.service.web;
 
+import java.util.List;
 import java.util.Map;
 
 import com.xiaokai.kuanrf.entity.web.Active;
@@ -17,6 +18,13 @@ public interface ActiveService
      * @return
      */
     DataGrid<Active> list(DataGridQuery query);
+
+    /**
+     * 移动端活动页-前三条
+     * @param query
+     * @return
+     */
+    List<Active> findActive();
     
     /**
      * 根据id查询活动信息
