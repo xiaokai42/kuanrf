@@ -21,7 +21,7 @@ import com.xiaokai.kuanrf.service.web.RecruitService;
 import com.xiaokai.kuanrf.util.FileUtil;
 
 import cn.proem.core.controller.BaseController;
-import sun.misc.BASE64Encoder;
+import sun.misc.BASE64Encoder;      
 
 /**
  * 移动端web接口
@@ -30,6 +30,7 @@ import sun.misc.BASE64Encoder;
  */
 @Controller
 @RequestMapping(value = "app")
+@SuppressWarnings("restriction")
 public class AppController extends BaseController {
     public static final Logger LOG = LoggerFactory.getLogger(AppController.class);
     

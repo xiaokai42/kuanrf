@@ -127,7 +127,7 @@
         <table>
             <tbody>
 	            <tr>
-	        		<td colspan="2" align="center"><span class="app-title">活动页banner大图</span></td>
+	        		<td colspan="2" align="center"><span class="app-title">优惠页banner大图</span></td>
 	        		<td colspan="2" align="center"><span class="app-title">招聘页banner大图</span></td>
 	        	</tr>
 	            <tr>
@@ -147,6 +147,20 @@
 	                    <input type="hidden" name="bannerImg2" id="bannerImg2-input" value="$!{appInfo.bannerImg2}" />
 	                    <input type="file" id="bannerImg2" data-type="80" class="uploadImg" name="file" accept="image/*"/>
 	                </td>
+	            </tr>
+	            <tr>
+	        		<td colspan="4" align="center"><span class="app-title">优惠页文本</span></td>
+	        	</tr>
+	        	<tr>
+                	<td colspan="4">
+                		<input type="text" class="input-form" style="width: 100%;"
+                			value="$!{appInfo.activeTitle}" datatype="*" nullmsg="请输入标题" name="activeTitle"/>
+                	</td>
+	            </tr>
+	        	<tr>
+                	<td colspan="4">
+                		<textarea name="txt">$!{appInfo.txt}</textarea>
+                	</td>
 	            </tr>
             </tbody>
         </table>

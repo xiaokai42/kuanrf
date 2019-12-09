@@ -160,6 +160,12 @@ public class AppInfo extends BaseEntity
      */
     @Column(name = "banner_img2", length = 50)
     private String bannerImg2;
+    
+    @Column(name = "active_title", length = 50)
+    private String activeTitle;
+    
+    @Column(columnDefinition = "text")
+    private String txt;
 
     public String getBannerImg()
     {
@@ -399,6 +405,26 @@ public class AppInfo extends BaseEntity
     public void setBannerImg2(String bannerImg2)
     {
         this.bannerImg2 = bannerImg2;
+    }
+
+    public String getActiveTitle()
+    {
+        return activeTitle;
+    }
+
+    public void setActiveTitle(String activeTitle)
+    {
+        this.activeTitle = activeTitle;
+    }
+
+    public String getTxt()
+    {
+        return txt;
+    }
+
+    public void setTxt(String txt)
+    {
+        this.txt = txt;
     }
 
 }
