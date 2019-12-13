@@ -159,7 +159,7 @@
 	            </tr>
 	        	<tr>
                 	<td colspan="4">
-                		<textarea name="txt">$!{appInfo.txt}</textarea>
+                		<textarea name="txt" style="height: 200px;">$!{appInfo.txt}</textarea>
                 	</td>
 	            </tr>
             </tbody>
